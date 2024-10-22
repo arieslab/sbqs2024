@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação da Sessão Técnica 6A - SBQS</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <button class="floating-button" onclick="history.back()" >
+        <i class="fas fa-arrow-left icon"></i> <!-- Ícone de voltar -->
+    </button>
+
+    
+    <header>
+       
+        <img src="../img/LOGO_SBQS.png" alt="Logo do Evento" class="logo">
+    </header>
+
+    <section class="programacao">
+
+        
+        <!-- Botões de Data -->
+        <div class="botoes-dias">
+
+            <h1>SESSÃO TÉCNICA 6B</h1>  
+            <h3>Industry and Academia</h3>
+            <h3>Sexta-Feira (08/11/2024)</h1>
+            <h3>Local: Auditório 02 </h1>
+            <h4>Coordenador: Johnny Marques </h4>
+            <button class="active" onclick="mostrarDia('sess1', this)">08:30</button>
+            <button onclick="mostrarDia('sess2', this)">08:50</button>
+            <button onclick="mostrarDia('sess3', this)">09:10</button>
+            <button onclick="mostrarDia('sess4', this)">09:30</button>
+           
+        </div>
+
+        <!-- Tabela de Programação -->
+        <div class="tabelas-programacao">
+            <table id="sess1" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>08:30</strong></td>
+                        <td >
+                            Software development practices and tools for a university-industry R&D project
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Relatos de Experiência
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Dhyego Tavares (Universidade Federal da Bahia - Brasil)
+                            <br>
+                            Erlon Almeida (Universidade Federal da Bahia - Brasil)
+                            <br>
+                            Jander Junior (Universidade Federal da Bahia - Brasil)
+                            <br>
+                            Felipe Paixão (Universidade Federal da Bahia - Brasil)
+                            <br>
+                            Enio Santana Jr. (Universidade Federal da Bahia - Brasil)
+                            <br>
+                            Rodrigo Souza (Universidade Federal da Bahia - Brasil)
+                            <br>
+                            Eduardo Almeida (Universidade Federal da Bahia - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+            
+            <table id="sess2" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>08:50</strong></td>
+                        <td >
+                            Prototyping of Geolocated Applications with Storyboarding - An Experience Report in the Case of the National Irrigation Information System
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Relatos de Experiência
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Iorrana M. do Nascimento (Universidade Federal de Lavras - Brasil)
+                            <br>
+                            Heitor Costa (FUniversidade Federal de Lavras - Brasil)
+                            <br>
+                            Bruna Capeleti (Universidade Federal de Lavras - Brasil)
+                            <br>
+                            Neumar Malheiros (Universidade Federal de Lavras - Brasil)
+                            <br>
+                            Andre Freire (Universidade Federal de Lavras - Brasil)
+                            <br>
+                            
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess3" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>09:10</strong></td>
+                        <td >
+                            Nurturing Talent: The IT Program Journey into Quality Development
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Relatos de Experiência
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Natalya Goelzer (Pontifícia Universidade Católica do Rio Grande do Sul - PUCRS - Brasil)
+                            <br>
+                            Pedro Possamai (Pontifícia Universidade Católica do Rio Grande do Sul - PUCRS - Brasil)
+                            <br>  
+                            Sabrina Marczak (Pontifícia Universidade Católica do Rio Grande do Sul - PUCRS - Brasil)
+                            <br> 
+                            Michael Mora (Pontifícia Universidade Católica do Rio Grande do Sul - PUCRS - Brasil)
+                            <br> 
+                            Daniel Callegari (Pontifícia Universidade Católica do Rio Grande do Sul - PUCRS - Brasil)
+                            <br> 
+                            
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess4" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>09:30</strong></td>
+                        <td >
+                            Collaboration Between Industry, Academia, and Government to Bridge Gaps in Software Engineering: Applications for Students and Professionals in Career Transition
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Relatos de Experiência
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Denis Marques (Universidade de Pernambuco - Brasil)
+                            <br>
+                            Bruna Santos (Universidade de Pernambuco - Brasil)
+                            <br>   
+                            Richard Rocha (Universidade de Pernambuco - Brasil)
+                            <br>
+                            Felipe Pacheco (Universidade Federal do Agreste de Pernambuco - Brasil)
+                            <br>
+                            Cleyton Rodrigues (Universidade de Pernambuco - Brasil)
+                            <br>
+                            Wylliams Santos (Universidade de Pernambuco - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script>
+        function mostrarDia(dia, botao) {
+            // Ocultar todas as tabelas
+            var dias = document.querySelectorAll('.tabela-programacao');
+            dias.forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            // Mostrar a tabela correspondente ao botão clicado
+            document.getElementById(dia).style.display = 'table';
+
+            // Remover a classe "active" de todos os botões
+            var botoes = document.querySelectorAll('.botoes-dias button');
+            botoes.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Adicionar a classe "active" ao botão clicado
+            botao.classList.add('active');
+        }
+
+        // Mostrar o primeiro dia por padrão
+        window.onload = function() {
+            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
+        };
+
+    </script>
+</body>
+</html>

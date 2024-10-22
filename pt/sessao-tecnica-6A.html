@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação da Sessão Técnica 6A - SBQS</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <button class="floating-button" onclick="history.back()" >
+        <i class="fas fa-arrow-left icon"></i> <!-- Ícone de voltar -->
+    </button>
+
+    
+    <header>
+       
+        <img src="../img/LOGO_SBQS.png" alt="Logo do Evento" class="logo">
+    </header>
+
+    <section class="programacao">
+
+        
+        <!-- Botões de Data -->
+        <div class="botoes-dias">
+
+            <h1>SESSÃO TÉCNICA 6A</h1>  
+            <h3>Integrating ChatGPT in Software Quality Education</h3>
+            <h3>Sexta-Feira (08/11/2024)</h1>
+            <h3>Local: Espaço Raul Chaves </h1>
+            <h4>Coordenadora: Patricia Matsubara </h4>
+            <button class="active" onclick="mostrarDia('sess1', this)">08:30</button>
+            <button onclick="mostrarDia('sess2', this)">08:50</button>
+            <button onclick="mostrarDia('sess3', this)">09:10</button>
+            <button onclick="mostrarDia('sess4', this)">09:30</button>
+           
+        </div>
+
+        <!-- Tabela de Programação -->
+        <div class="tabelas-programacao">
+            <table id="sess1" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>08:30</strong></td>
+                        <td >
+                            AI-Driven Acceptance Testing: first insights exploring the educational potential for test analysts
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Educação em Qualidade de Software
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Caio Maia (Universidade Federal da Paraíba - Brasil)
+                            <br>
+                            Yuska Paola Costa Aguiar (Universidade Federal da Paraíba - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+            
+            <table id="sess2" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>08:50</strong></td>
+                        <td >
+                            Teaching Refactoring to Improve Code Quality with ChatGPT: An Experience Report in Undergraduate Lessons
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Educação em Qualidade de Software
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            André Luís Menolli (Universidade Estadual do Norte do Paraná - UENP - Brasil)
+                            <br>
+                            Bruno Henrique Strik (Instituto Federal do Paraná - Brasil)
+                            <br>
+                            Luiz Rodrigues (NEES - UFAL - Brasil)
+                            <br>
+                            
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess3" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>09:10</strong></td>
+                        <td >
+                            Integrating ChatGPT in Project Management Education: Benefits and Challenges in the Academic Environment
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Educação em Qualidade de Software
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Ana Carolina Oran (Universidade Federal do Amazonas - Brasil)
+                            <br>
+                            Letícia Braga Montenegro (Universidade Federal do Amazonas - Brasil)
+                            <br>  
+                            Hellmut Alencar (Universidade Federal do Amazonas - Brasil)
+                            <br> 
+                            José Carlos Duarte (Universidade Federal do Amazonas - Brasil)
+                            <br> 
+                            Williamson Silva (Universidade Federal do Pampa (Campus Alegrete) - Brasil)
+                            <br> 
+                            Rayfran Lima (Sidia Institute | Cesar School - Brasil)
+                            <br> 
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess4" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>09:30</strong></td>
+                        <td >
+                            Exploring the Use of Large Language Models in Requirements Engineering Education: An Experience Report with ChatGPT 3.5
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Educação em Qualidade de Software
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Sávio Sampaio (Universidade Federal do Amazonas - Brasil)
+                            <br>
+                            Eriky Souza (Universidade Federal do Amazonas - Brasil)
+                            <br>   
+                            Maria Alcimar Costa Meireles (Universidade Federal do Amazonas - Brazil)
+                            <br>
+                            Marcela Pessoa (Universidade do Estado do Amazonas - Brasil)
+                            <br>
+                            Márcia Lima (Universidade do Estado do Amazonas - Brasil)
+                            <br>
+                            Tayana Conte (Universidade Federal do Amazonas - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script>
+        function mostrarDia(dia, botao) {
+            // Ocultar todas as tabelas
+            var dias = document.querySelectorAll('.tabela-programacao');
+            dias.forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            // Mostrar a tabela correspondente ao botão clicado
+            document.getElementById(dia).style.display = 'table';
+
+            // Remover a classe "active" de todos os botões
+            var botoes = document.querySelectorAll('.botoes-dias button');
+            botoes.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Adicionar a classe "active" ao botão clicado
+            botao.classList.add('active');
+        }
+
+        // Mostrar o primeiro dia por padrão
+        window.onload = function() {
+            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
+        };
+
+    </script>
+</body>
+</html>
