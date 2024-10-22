@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação da Sessão Técnica 3A - SBQS</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <button class="floating-button" onclick="history.back()" >
+        <i class="fas fa-arrow-left icon"></i> <!-- Ícone de voltar -->
+    </button>
+
+    
+    <header>
+       
+        <img src="../img/LOGO_SBQS.png" alt="Logo do Evento" class="logo">
+    </header>
+
+    <section class="programacao">
+
+        
+        <!-- Botões de Data -->
+        <div class="botoes-dias">
+
+            <h1>SESSÃO TÉCNICA 3A</h1>  
+            <h3>Educação em Qualidade de Software</h3>
+            <h3>Quinta-Feira (07/11/2024) </h1>
+            <h3>Local: Espaço Raul Chaves </h1>
+            <h4>Coordenador: Bruno Gadelha </h4>
+            <button class="active" onclick="mostrarDia('sess1', this)">08:30</button>
+            <button onclick="mostrarDia('sess2', this)">08:50</button>
+            <button onclick="mostrarDia('sess3', this)">09:10</button>
+            <button onclick="mostrarDia('sess4', this)">09:30</button>
+       
+        </div>
+
+        <!-- Tabela de Programação -->
+        <div class="tabelas-programacao">
+            <table id="sess1" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>08:30</strong></td>
+                        <td >
+                            Usability from Requirements Engineering to Interaction Design: A Qualitative Study on the USINN and USARP Approaches
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                             Hanna Ranielly (Universidade Federal do Ceará - Brasil)
+                            <br>
+                             Francisco Wilkinis Pereira de Sousa (Universidade Federal do Ceará - Campus de Russas - Brasil)
+                            <br>
+                             Valéria Pinheiro (Universidade Federal do Ceará - Brasil)
+                            <br>
+                              Anna Beatriz Marques (Universidade Federal do Ceará - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+            
+            <table id="sess2" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>08:50</strong></td>
+                        <td >
+                            A Qualitative Study and Improvement on UX and Usability Evaluation Questionnaire focused on Multi-touch Systems
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Guilherme Konopatzki Filho (Universidade Federal do Paraná - Brasil)
+                            <br>
+                            Guilherme Guerino (Universidade Estadual do Paraná - Brasil)
+                            <br>
+                            Natasha Valentim (Universidade Federal do Paraná – Brasil)
+                            <br>
+                            
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess3" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>09:10</strong></td>
+                        <td >
+                            Educating for Accessibility: Insights into Knowledge Gaps and Practical Challenges in Software Engineering
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Educação em Qualidade de Software
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Renata Vinadé (PUCRS - Brasil)
+                            <br>
+                            Sabrina Marczak (PUCRS - Brasil)
+                            <br>       
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess4" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>09:30</strong></td>
+                        <td >
+                            The Brazilian Practices for Handling Sustainability in Software Engineering: a Replicated Survey
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Jéssyka Vilela (Universidade Federal de Pernambuco - Brasil)
+                            <br>
+                            Rodrigo Melo (Universidade Federal de Pernambuco - Brasil)
+                            <br>   
+                            Mariana Peixoto (Universidade Federal de Pernambuco - Brasil)
+                            <br>
+                            João Araújo (Universidade Nova de Lisboa - Portugal)
+                            <br>
+                            Carla Silva (Universidade Federal de Pernambuco - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script>
+        function mostrarDia(dia, botao) {
+            // Ocultar todas as tabelas
+            var dias = document.querySelectorAll('.tabela-programacao');
+            dias.forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            // Mostrar a tabela correspondente ao botão clicado
+            document.getElementById(dia).style.display = 'table';
+
+            // Remover a classe "active" de todos os botões
+            var botoes = document.querySelectorAll('.botoes-dias button');
+            botoes.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Adicionar a classe "active" ao botão clicado
+            botao.classList.add('active');
+        }
+
+        // Mostrar o primeiro dia por padrão
+        window.onload = function() {
+            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
+        };
+
+    </script>
+</body>
+</html>
