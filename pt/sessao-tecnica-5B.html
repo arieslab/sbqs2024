@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação do Evento</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <button class="floating-button" onclick="history.back()" >
+        <i class="fas fa-arrow-left icon"></i> <!-- Ícone de voltar -->
+    </button>
+
+    
+    <header>
+       
+        <img src="../img/LOGO_SBQS.png" alt="Logo do Evento" class="logo">
+    </header>
+
+    <section class="programacao">
+
+        
+        <!-- Botões de Data -->
+        <div class="botoes-dias">
+
+            <h1>SESSÃO TÉCNICA 5B</h1>  
+            <h3>Agile and Software Management</h3>
+            <h3>Quinta-Feira (07/11/2024)</h1>
+            <h3>Local: Auditório 02 </h1>
+            <h4>Coordenadora: Monalessa Barcellos </h4>
+            <button class="active" onclick="mostrarDia('sess1', this)">16:00</button>
+            <button onclick="mostrarDia('sess2', this)">16:20</button>
+            <button onclick="mostrarDia('sess3', this)">16:40</button>
+            <button onclick="mostrarDia('sess4', this)">17:00</button>
+            <button onclick="mostrarDia('sess5', this)">17:20</button>
+            <button onclick="mostrarDia('sess6', this)">17:40</button>
+            <button onclick="mostrarDia('sess7', this)">18:00</button>
+        </div>
+
+        <!-- Tabela de Programação -->
+        <div class="tabelas-programacao">
+            <table id="sess1" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>16:00</strong></td>
+                        <td >
+                            Metrics for Large-Scale Agile Development: A Survey of the Brazilian Software Industry
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Renato Menezes (Universidade Federal Rural de Pernambuco - Brasil)
+                            <br>
+                            Marcelo Marinho (Universidade Federal Rural de Pernambuco - Brasil)
+                            <br>
+                            Suzana Sampaio (Universidade Federal Rural de Pernambuco - Brasil)
+                            
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+            
+            <table id="sess2" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>16:20</strong></td>
+                        <td >
+                            Technical Debt Management in Agile Software Development: A Systematic Mapping Study
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Gilberto Leite (UFBA - Brasil)
+                            <br>
+                            Ricardo Vieira (UFBA - Brasil)
+                            <br>
+                            Lidiany Cerqueira (Universidade Federal da Bahia - Brasil)
+                            <br>      
+                            Rita Suzana Pitangueira Maciel (Universidade Federal da Bahia - Brasil)
+                            <br> 
+                            Sávio Freire (Instituto Federal do Ceará - Brasil)
+                            <br> 
+                            Manoel Mendonca (UFBA - Brasil)
+                            <br> 
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess3" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>16:40</strong></td>
+                        <td >
+                            Critical Factors for Software Product Management: A Systematic Literature Review
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Isadora Paranhos (UNIRIO - Brasil)
+                            <br>
+                            Gleison Santos (UNIRIO - Brasil)
+                            <br>  
+                           
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess4" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>17:00</strong></td>
+                        <td >
+                            Burnout in Software Projects: An Analysis of Stack Exchange Discussions
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Antonio Paula (UNIFACS - Brasil)
+                            <br>
+                            Carlos Frederico Muakad (UNIVERSIDADE ESTACIO - FIB - Brasil)
+                            <br>   
+                            Sávio Freire (Instituto Federal do Ceará - Brasil)
+                            <br>
+                            Rodrigo Spínola (Salvador University and Virginia Commonwealth University - USA)
+                            <br>
+                            Manoel Mendonca (UFBA - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess5" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>17:20</strong></td>
+                        <td >
+                            Towards Role Definition in Agile AI-based System Development: Perspectives and Reflections
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Francisco Carlos Souza (Universidade Tecnológica Federal do Paraná - Brasil)
+                            <br>
+                            Alinne Souza (Universidade Tecnológica Federal do Paraná - Brasil)
+                            <br>   
+                            Bruno Faustino Amorim (Universidade Tecnológica Federal do Paraná - Brasil)
+                            <br>
+                            Thiago Cordeiro (Universidade Federal de Alagoas - Brasil)
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess6" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>17:40</strong></td>
+                        <td >
+                            Linking Agile Planning and Safety and Security Analysis in Critical IoT Systems: An Approach based on ISO/IEC/IEEE 15288
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Ernesto Veiga (Universidade Federal de Goiás - Brasil)
+                            <br>
+                            Taciana Novo Kudo (Universidade Federal de Goiás - UFG - Brasil)
+                            <br>
+                            Renato Bulcão-Neto (Universidade Federal de Goiás - Brasil)
+                            <br>
+                            
+                           
+                            
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+
+            <table id="sess7" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>18:00</strong></td>
+                        <td >
+                            Updating a Systematic Literature Review on Knowledge Management Diagnostics in Software Development Organizations
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Daniela Alves (Universidade Tecnológica Federal do Paraná - Brasil)
+                            <br>
+                            Deivid Jose Smek (Universidade Federal da Integração Latino Americana - Brasil)
+                            <br>
+                            Érica Souza (Universidade Tecnológica Federal do Paraná (UTFPR) - Brasil)
+                            <br>
+                            Katia Felizardo (Universidade Tecnológica Federal do Paraná - Brasil)
+                            <br>
+                            Nandamudi Vijaykumar (Instituto Nacional de Pesquisas Espaciais- Brasil)
+                            <br>
+                            
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script>
+        function mostrarDia(dia, botao) {
+            // Ocultar todas as tabelas
+            var dias = document.querySelectorAll('.tabela-programacao');
+            dias.forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            // Mostrar a tabela correspondente ao botão clicado
+            document.getElementById(dia).style.display = 'table';
+
+            // Remover a classe "active" de todos os botões
+            var botoes = document.querySelectorAll('.botoes-dias button');
+            botoes.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Adicionar a classe "active" ao botão clicado
+            botao.classList.add('active');
+        }
+
+        // Mostrar o primeiro dia por padrão
+        window.onload = function() {
+            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
+        };
+
+    </script>
+</body>
+</html>

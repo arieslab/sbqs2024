@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação do Evento</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <button class="floating-button" onclick="history.back()" >
+        <i class="fas fa-arrow-left icon"></i> <!-- Ícone de voltar -->
+    </button>
+
+    
+    <header>
+       
+        <img src="../img/LOGO_SBQS.png" alt="Logo do Evento" class="logo">
+    </header>
+
+    <section class="programacao">
+
+        
+        <!-- Botões de Data -->
+        <div class="botoes-dias">
+
+            <h1>SESSÃO TÉCNICA 5A</h1>  
+            <h3>Requirements Engineering – Practices, Solutions, and Education</h3>
+            <h3>Quinta-Feira (07/11/2024)</h1>
+            <h3>Local: Raul Chaves </h1>
+            <h4>Coordenadora: Sheila Reinehr </h4>
+            <button class="active" onclick="mostrarDia('sess1', this)">16:00</button>
+            <button onclick="mostrarDia('sess2', this)">16:20</button>
+            <button onclick="mostrarDia('sess3', this)">16:40</button>
+            <button onclick="mostrarDia('sess4', this)">17:00</button>
+            <button onclick="mostrarDia('sess5', this)">17:20</button>
+            <button onclick="mostrarDia('sess6', this)">17:40</button>
+            <button onclick="mostrarDia('sess7', this)">18:00</button>
+        </div>
+
+        <!-- Tabela de Programação -->
+        <div class="tabelas-programacao">
+            <table id="sess1" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>16:00</strong></td>
+                        <td >
+                            Investigating Solutions for Social and Human Factors in Requirements Engineering
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Rodrigo Gonçalves (Universidade Federal do Rio de Janeiro - UFRJ - Brasil)
+                            <br>
+                            Cassiano Junior (UNIRIO - Brasil)
+                            <br>
+                            Paulo Malcher (UFRA & UNIRIO - Brasil)
+                            <br>
+                            Rodrigo Santos (UNIRIO - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+            
+            <table id="sess2" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>16:20</strong></td>
+                        <td >
+                            Application of human-centered design practices in the agile requirements engineering process: a case study in a public company
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Relatos de Experiência
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Viviane Coutinho (Universidade Federal de Lavras - Brasil)
+                            <br>
+                            Maurício Souza (UFLA - Brasil)
+                            <br>
+                            Andre Freire (Universidade Federal de Lavras - Brasil)
+                            <br>        
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess3" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>16:40</strong></td>
+                        <td >
+                            Teaching Requirements Engineering for AI: A Goal-Oriented Approach in Software Engineering Course
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Educação em Qualidade de Software
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Beatriz Batista (UFAM - Brasil)
+                            <br>
+                            Márcia Lima (Universidade do Estado do Amazonas - Brasil)
+                            <br>  
+                            Tayana Conte (UFAM - Brasil)
+                            <br> 
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess4" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>17:00</strong></td>
+                        <td >
+                            Assisting the Requirements Definition and Modeling of IoT applications through the ReqM4IoT tool
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Rodrigo Nascimento Siqueira (Universidade Federal do Maranhão - Brasil)
+                            <br>
+                            Bruno Carvalho (UFMA - Brasil)
+                            <br>   
+                            Guilherme Avelino (Universidade Federal do Piaui - Brasil)
+                            <br>
+                            Davi Viana (Universidade Federal do Maranhão - Brasil)
+                            <br>
+                            
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess5" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>17:20</strong></td>
+                        <td >
+                            A Comparative Study of Tools for Detecting Anomalies in Software Requirements
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Fábio Pereira (Universidade Federal de Lavras - Brasil)
+                            <br>
+                            Heitor Costa (Universidade Federal de Lavras - Brasil)
+                            <br>   
+                            Paulo Parreira Júnior (Universidade Federal de Lavras - Brasil)
+                            <br>
+                           
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess6" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>17:40</strong></td>
+                        <td >
+                            Continuous Improvement of the Requirements Engineering Process in a R&D Project
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Relatos de Experiência
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Luã Silva (UFPA - Brasil)
+                            <br>
+                            Carlos Portela (UFPA - Brasil)
+                            <br>   
+                            Rodrigo Lisbôa Pereira (Universidade Federal Rural da Amazônia - Brasil)
+                            <br>
+                            Alinne Souza (Universidade Tecnológica Federal do Paraná - Brasil)
+                            <br>
+                            Francisco Carlos Souza (Universidade Tecnológica Federal do Paraná - Brasil)
+                            <br>
+                            Thiago Cordeiro (Universidade Federal de Alagoas - Brasil)
+                            <br>
+                            Cesar Lobato (Universidade Federal do Pará - Brasil)
+                            <br>
+                            Heleno Fülber (Universidade Federal do Pará - Brasil)
+                            <br>
+                            
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+
+            <table id="sess7" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>18:00</strong></td>
+                        <td >
+                            Towards Software Asset Management in Proprietary Software Ecosystems: A Participative Case Study
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Luiz Costa (Universidade Federal do Estado do Rio de Janeiro - Brasil)
+                            <br>
+                            Juliana Outão (Universidade Federal do Estado do Rio de Janeiro - Brasil)
+                            <br>   
+                            Jefferson Elbert Simões (Universidade Federal do Estado do Rio de Janeiro (UNIRIO) - Brasil)
+                            <br>
+                            Rodrigo Santos (UNIRIO - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script>
+        function mostrarDia(dia, botao) {
+            // Ocultar todas as tabelas
+            var dias = document.querySelectorAll('.tabela-programacao');
+            dias.forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            // Mostrar a tabela correspondente ao botão clicado
+            document.getElementById(dia).style.display = 'table';
+
+            // Remover a classe "active" de todos os botões
+            var botoes = document.querySelectorAll('.botoes-dias button');
+            botoes.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Adicionar a classe "active" ao botão clicado
+            botao.classList.add('active');
+        }
+
+        // Mostrar o primeiro dia por padrão
+        window.onload = function() {
+            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
+        };
+
+    </script>
+</body>
+</html>
