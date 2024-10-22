@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação da Sessão Técnica 3A - SBQS</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <button class="floating-button" onclick="history.back()" >
+        <i class="fas fa-arrow-left icon"></i> <!-- Ícone de voltar -->
+    </button>
+
+    
+    <header>
+       
+        <img src="../img/LOGO_SBQS.png" alt="Logo do Evento" class="logo">
+    </header>
+
+    <section class="programacao">
+
+        
+        <!-- Botões de Data -->
+        <div class="botoes-dias">
+
+            <h1>SESSÃO TÉCNICA 3B</h1>  
+            <h3>Code and Low Code</h3>
+            <h3>Quinta-Feira (07/11/2024) </h1>
+            <h3>Local: Auditório 02 </h1>
+            <h4>Coordenador: Breno França </h4>
+            <button class="active" onclick="mostrarDia('sess1', this)">08:30</button>
+            <button onclick="mostrarDia('sess2', this)">08:50</button>
+            <button onclick="mostrarDia('sess3', this)">09:10</button>
+            <button onclick="mostrarDia('sess4', this)">09:30</button>
+       
+        </div>
+
+        <!-- Tabela de Programação -->
+        <div class="tabelas-programacao">
+            <table id="sess1" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>08:30</strong></td>
+                        <td >
+                            Code on Demand: A Comparative Analysis of the Efficiency, Understandability, and Self-Correction Capability of Copilot, ChatGPT, and Gemini
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Samuel Batista (Universidade Federal do Piauí - Brasil)
+                            <br>
+                            Guilherme Avelino (Universidade Federal do Piauí - Brasil)
+                            <br>
+                            Bruno Branco (Universidade Federal do Piauí - Brazil),
+                            <br>
+                            Otavio Cury (Universidade Federal do Piauí - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+            
+            <table id="sess2" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>08:50</strong></td>
+                        <td >
+                            Mining Discussions on Software Migration: A study of the Boost mailing list regarding C++ code evolution
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Pedro Carvalho (Universidade de Brasília - Brasil)
+                            <br>
+                            Alana Barbosa Mota (Pioneer Union of Social Integration (UPIS) - Brasil)
+                            <br>
+                            Walter Lucas Monteiro de Mendonça (Universidade de Brasília - Brasil)
+                            <br>
+                            Rodrigo Bonifacio (Universidade de Brasilia - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess3" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>09:10</strong></td>
+                        <td >
+                            Low-Code Quality Metrics for Agile Software Development
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Renato Domingues (Universidade Federal Rural de Pernambuco - Brasil)
+                            <br>
+                            Mário Silva (INESC-ID, Instituto Superior Técnico, Universidade de Lisboa - Portugal)
+                            <br>     
+                            Marcelo Marinho (Universidade Federal Rural de Pernambuco - Brasil)
+                            <br>  
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess4" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>09:30</strong></td>
+                        <td >
+                            Evaluation of low code and no code platforms as a strategy to increase productivity in software development
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Jucie Silva (IFPI - Brazil)
+                            <br>
+                            Guilherme Avelino (Universidade Federal do Piauí - Brasil)
+                            <br>   
+                          
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script>
+        function mostrarDia(dia, botao) {
+            // Ocultar todas as tabelas
+            var dias = document.querySelectorAll('.tabela-programacao');
+            dias.forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            // Mostrar a tabela correspondente ao botão clicado
+            document.getElementById(dia).style.display = 'table';
+
+            // Remover a classe "active" de todos os botões
+            var botoes = document.querySelectorAll('.botoes-dias button');
+            botoes.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Adicionar a classe "active" ao botão clicado
+            botao.classList.add('active');
+        }
+
+        // Mostrar o primeiro dia por padrão
+        window.onload = function() {
+            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
+        };
+
+    </script>
+</body>
+</html>
