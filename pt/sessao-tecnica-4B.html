@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação do Evento</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <button class="floating-button" onclick="history.back()" >
+        <i class="fas fa-arrow-left icon"></i> <!-- Ícone de voltar -->
+    </button>
+
+    
+    <header>
+       
+        <img src="../img/LOGO_SBQS.png" alt="Logo do Evento" class="logo">
+    </header>
+
+    <section class="programacao">
+
+        
+        <!-- Botões de Data -->
+        <div class="botoes-dias">
+
+            <h1>SESSÃO TÉCNICA 4B</h1>  
+            <h3>Requirements & Software Quality</h3>
+            <h3>Quinta-Feira (07/11/2024)</h1>
+            <h3>Local: Auditório 02 </h1>
+            <h4>Coordenadora: Edna Dias Canedo </h4>
+            <button class="active" onclick="mostrarDia('sess1', this)">13:30</button>
+            <button onclick="mostrarDia('sess2', this)">13:50</button>
+            <button onclick="mostrarDia('sess3', this)">14:10</button>
+            <button onclick="mostrarDia('sess4', this)">14:30</button>
+            <button onclick="mostrarDia('sess5', this)">14:50</button>
+            <button onclick="mostrarDia('sess6', this)">15:10</button>
+        </div>
+
+        <!-- Tabela de Programação -->
+        <div class="tabelas-programacao">
+            <table id="sess1" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>13:30</strong></td>
+                        <td >
+                            What do LinkedIn Brazilian Ads ask of Requirements Engineers?
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Eurizene Sousa (IFCE - Brasil)
+                            <br>
+                            Murilo Coelho (IA e UECE - Brasil)
+                            <br>
+                            Roberta Braga (IFCE - Brasil)
+                            <br>
+                            Matheus Paixão (Universidade Estadual do Ceará - Brasil)
+                            <br>
+                            Rodrigo Spínola (Salvador University and Virginia Commonwealth University - USA)
+                            <br>
+                            Manoel Mendonca (UFBA - Brasil)
+                            <br>
+                            Julio Leite (UFBA - Brasil)
+                            <br>
+                            Sávio Freire (Instituto Federal do Ceará - Brasil)
+                            <br>  
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+            
+            <table id="sess2" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>13:50</strong></td>
+                        <td >
+                            Impact of including a review stage within a software requirement development process
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Rafael Simões (SIDIA - Brasil)
+                            <br>
+                            Lais Calderado (Universidade do Estado do Amazonas - Brasil)
+                            <br>
+                            Livia Carvalho (SIDIA - Brasil)
+                            <br>
+                            Renan Peres (Sidia - Brasil)
+                            <br>
+                            Robert Garcia (SIDIA - Brasil)
+                            <br>
+                            Edluce Veras (Sidia Instituto de Ciência e Tecnologia - Brasil)
+                            <br>
+                            Daniel Lima de Souza (SIDIA Instituto de Ciência e Tecnologia - Brasil)
+                            <br>
+                            
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess3" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>14:10</strong></td>
+                        <td >
+                            Eliciting Public Discourse of SE Tool Providers in a Study on Requirements Process Debt A Different Shade of Gray
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Sávio Freire (Instituto Federal do Ceará - Brasil)
+                            <br>
+                            Rita Suzana Pitangueira Maciel (Universidade Federal da Bahia - Brasil)
+                            <br> 
+                            Manoel Mendonca (UFBA - Brasil)
+                            <br>
+                            Julio Leite (UFBA - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess4" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>14:30</strong></td>
+                        <td >
+                            How Software Industry Specifies Requirements Compliant with Data Protection Laws: a survey-based study
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Dorgival Netto (UFCA - Brasil)
+                            <br>
+                            Carla Silva (Universidade Federal de Pernambuco - Brasil)
+                            <br>   
+                            João Araújo (Universidade Nova de Lisboa - Portugal)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess5" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>14:50</strong></td>
+                        <td >
+                            Evaluation of a Catalog of Privacy Requirements Patterns Based on the LGPD
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Cinara Carneiro (Universidade Federal de Goiás - Brasil)
+                            <br>
+                            Renato Bulcão-Neto (Universidade Federal de Goiás - Brasil)
+                            <br>   
+                            Taciana Novo Kudo (Universidade Federal de Goiás - UFG - Brasil)
+                            <br>
+                           
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess6" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>15:10</strong></td>
+                        <td >
+                            Promoting Quality in BDD Scenarios Using Checklists: An Investigation into Novice Professionals Perspective
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Natalya Goelzer (PUCRS - Brasil)
+                            <br>
+                            Sabrina Marczak (PUCRS - Brasil)
+                            <br>    
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script>
+        function mostrarDia(dia, botao) {
+            // Ocultar todas as tabelas
+            var dias = document.querySelectorAll('.tabela-programacao');
+            dias.forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            // Mostrar a tabela correspondente ao botão clicado
+            document.getElementById(dia).style.display = 'table';
+
+            // Remover a classe "active" de todos os botões
+            var botoes = document.querySelectorAll('.botoes-dias button');
+            botoes.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Adicionar a classe "active" ao botão clicado
+            botao.classList.add('active');
+        }
+
+        // Mostrar o primeiro dia por padrão
+        window.onload = function() {
+            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
+        };
+
+    </script>
+</body>
+</html>
