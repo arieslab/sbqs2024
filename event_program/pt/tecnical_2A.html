@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação do Evento</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <button class="floating-button" onclick="history.back()" >
+        <i class="fas fa-arrow-left icon"></i> <!-- Ícone de voltar -->
+    </button>
+
+    
+    <header>
+       
+        <img src="../../img/LOGO_SBQS.png" alt="Logo do Evento" class="logo">
+    </header>
+
+    <section class="programacao">
+
+        
+        <!-- Botões de Data -->
+        <div class="botoes-dias">
+
+            <h1>SESSÃO TÉCNICA 2A</h1>  
+            <h3>Software Quality Education – Techniques, Methods, and Tools</h3>
+            <h3>Quarta-feira (06/11/2024)</h1>
+            <h3>Local: Espaço Raul Chaves </h1>
+            <h4>Coordenador: Gleison Santos (UNIRIO) </h4>
+            <button class="active" onclick="mostrarDia('sess1', this)">16:00</button>
+            <button onclick="mostrarDia('sess2', this)">16:20</button>
+            <button onclick="mostrarDia('sess3', this)">16:40</button>
+            <button onclick="mostrarDia('sess4', this)">17:00</button>
+            <button onclick="mostrarDia('sess5', this)">17:20</button>
+            <button onclick="mostrarDia('sess6', this)">17:40</button>
+        </div>
+
+        <!-- Tabela de Programação -->
+        <div class="tabelas-programacao">
+            <table id="sess1" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>16:00</strong></td>
+                        <td >
+                            Immersive Role-Playing: An Experience Report on a Promising Approach to Learning Requirements Elicitation
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Educação em Qualidade de Software
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Kelly Otemaier (Pontifícia Universidade Católica do Paraná - Brasil)
+                            <br>
+                            Regina Albuquerque (Pontifícia Universidade Católica do Paraná - Brasil)
+                            <br>
+                            Rodolfo Diniz Biazi (PUCPR - Brasil)
+                            <br>
+                            Sheila Reinehr (Pontificia Universidade Católica do Paraná - Brasil)
+                            <br>
+                            Andreia Malucelli (PUCPR - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+            
+            <table id="sess2" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>16:20</strong></td>
+                        <td >
+                            Exploring Gamification with Personality Badges in Software Quality Educatio
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Educação em Qualidade de Software
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Lauana Oliveira (Universidade Federal do Ceará - Brasil)
+                            <br>
+                            Francisco Wilkinis Pereira de Sousa (Universidade Federal do Ceará - Campus de Russas - Brasil)
+                            <br>
+                            Thiago Freitas (Universidade Federal do Ceará - Brasil)
+                            <br>
+                            Deusdedit Neto (Universidade Federal do Ceará - Brasil)
+                            <br>
+                            Maria Elanne Rodrigues (Universidade Federal do Ceará - Brasil)
+                            <br>
+                            Anna Beatriz Marques (Universidade Federal do Ceará - Brazil)
+                            <br>
+                            
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess3" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>16:40</strong></td>
+                        <td >
+                            An Experience Report on the Application of Fishbowl Active Method in Systems Analysis and Design Teaching
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Educação em Qualidade de Software
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Vitor Castro (Universidade Federal Sul e Sudeste do Pará - Brasil)
+                            <br>
+                            Sandro Ronaldo Bezerra Oliveira (Universidade Federal do Pará - Brasil)
+                            <br>       
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess4" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>17:00</strong></td>
+                        <td >
+                            Using Extension Projects to Improve Software Engineering Education and Software Quality: The Experience of the “Ricardo de Almeida Falbo” Software Engineering Practices Laboratory
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Educação em Qualidade de Software
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Monalessa Perini Barcellos (Universidade Federal do Espírito Santo - Brasil)
+                            <br>
+                            Vítor Silva Souza (Universidade Federal do Espírito Santo - Brasil)
+                            <br>   
+                            Patricia Dockhorn Costa (Universidade Federal do Espírito Santo - Brasil)
+                            <br>
+                            Camila Aguiar (Universidade Federal do Espirito Santo - UFES - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess5" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>17:20</strong></td>
+                        <td >
+                            Integrating DevOps into Software Engineering Education: A Laboratory Experience
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Educação em Qualidade de Software
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Lucas Reis (Universidade Federal do Maranhão - Brasil)
+                            <br>
+                            Fernando Castro (Universidade Federal do Maranhão - Brasil)
+                            <br>   
+                            Hudson Diniz (Universidade Federal do Maranhão - Brasil)
+                            <br>
+                            Benedito Dutra-Neto (Universidade Federal do Maranhão - Brasil)
+                            <br>
+                            Luis Fellipe Silva (Universidade Federal do Maranhão - Brasil)
+                            <br>
+                            Davi Viana (Universidade Federal do Maranhão - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess6" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>17:40</strong></td>
+                        <td >
+                            Card Game as an Educational Strategy in Software Testing: DEBUG, a Game to Explore Content on Test Levels and Type
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Educação em Qualidade de Software 
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Carolina Melo (Universidade Federal da Paraíba  - Brasil)
+                            <br>
+                            Yuska Paola Costa Aguiar (Universidade Federal da Paraíba  - Brasil)
+                            <br>   
+                            Luiz Souza (Universidade Federal da Paraíba - Brasil),
+                            <br>
+                            Jayanne Laysa Morais (Universidade Federal da Paraíba - Brasil),
+                            <br>
+                            Pedro Alves (Universidade Federal da Paraíba - Brasil)
+                            <br>
+                            
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script>
+        function mostrarDia(dia, botao) {
+            // Ocultar todas as tabelas
+            var dias = document.querySelectorAll('.tabela-programacao');
+            dias.forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            // Mostrar a tabela correspondente ao botão clicado
+            document.getElementById(dia).style.display = 'table';
+
+            // Remover a classe "active" de todos os botões
+            var botoes = document.querySelectorAll('.botoes-dias button');
+            botoes.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Adicionar a classe "active" ao botão clicado
+            botao.classList.add('active');
+        }
+
+        // Mostrar o primeiro dia por padrão
+        window.onload = function() {
+            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
+        };
+
+    </script>
+</body>
+</html>

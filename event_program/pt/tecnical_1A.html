@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação do Evento</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <button class="floating-button" onclick="history.back()" >
+        <i class="fas fa-arrow-left icon"></i> <!-- Ícone de voltar -->
+    </button>
+
+    
+    <header>
+       
+        <img src="../../img/LOGO_SBQS.png" alt="Logo do Evento" class="logo">
+    </header>
+
+    <section class="programacao">
+
+        
+        <!-- Botões de Data -->
+        <div class="botoes-dias">
+
+            <h1>SESSÃO TÉCNICA 1A</h1>  
+            <h3>Artificial Intelligence, Data Science, and Software Quality</h3>
+            <h3>Quarta-feira (06/11/2024)</h1>
+            <h3>Local: Espaço Raul Chaves </h1>
+            <h4>Coordenador: Márcia Sampaio Lima </h4>
+            <button class="active" onclick="mostrarDia('sess1', this)">13:30</button>
+            <button onclick="mostrarDia('sess2', this)">13:50</button>
+            <button onclick="mostrarDia('sess3', this)">14:10</button>
+            <button onclick="mostrarDia('sess4', this)">14:30</button>
+            <button onclick="mostrarDia('sess5', this)">14:50</button>
+            <button onclick="mostrarDia('sess6', this)">15:10</button>
+        </div>
+
+        <!-- Tabela de Programação -->
+        <div class="tabelas-programacao">
+            <table id="sess1" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>13:30</strong></td>
+                        <td >
+                            Trust in AI: Perspectives of C-Level Executives in Brazilian Organizations
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos 
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Clendson Gonçalves (Universidade de Brasília - Brasil)
+                            <br>
+                            Eduardo De Paoli Menescal (Universidade de Brasilia (UnB) - Brasil)
+                            <br>
+                            Fabio Mendonca (Universidade de Brasília - Brasil)
+                            <br>
+                            Edna Canedo (Universidade de Brasília - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+            
+            <table id="sess2" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>13:50</strong></td>
+                        <td >
+                            Impact of Generative AI Technologies on Software Development Professionals' Perceptions of Job Security
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos 
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Phelipe Malheiros (Universidade Federal do Amazonas - Brasil)
+                            <br>
+                            Rayfran Rocha Lima (Cesar School - Brasil)
+                            <br>
+                            Ana Carolina Oran (Universidade Federal do Amazonas - Brazil)
+                            <br>
+                            
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess3" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>14:10</strong></td>
+                        <td >
+                            Investigating Software Development Teams Members? Perceptions of Data Privacy in the Use of Large Language Models (LLMs)
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos 
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Fabiano Falcão (University of Brasilia - Brasil)
+                            <br>
+                            Edna Canedo (Universidade de Brasília - UNB - Brasil)
+                            <br>       
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess4" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>14:30</strong></td>
+                        <td >
+                            Quality of big data systems: a systematic review - practices, method, and tools
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos 
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Icaro de Oliveira (Ceará State University (UECE) - Brasil)
+                            <br>
+                            Joao Matheus Lima (Ceará State University (UECE) - Brasil)
+                            <br>   
+                            Samuel Cristhian (Universidade Estadual do Ceará - Brasil)
+                            <br>
+                            Ismayle Sousa Santos (Universidade Estadual do Ceará - Brasil)
+                            <br>
+                            Rossana Andrade (Universidade Federal do Ceará - UFC - Brasil)
+                            <br>
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess5" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>14:50</strong></td>
+                        <td >
+                            AI in Service of Software Quality: How ChatGPT and Personas Are Transforming Exploratory Testing
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos 
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Ágatha Almeida (Universidade Federal do Amazonas - Brazil)
+                            <br>
+                            Eliane Collins (Instituto de Desenvolvimento Technológico - INDT - Brazil)
+                            <br>   
+                            Ana Carolina Oran (Universidade Federal do Amazonas - Brazil)
+                            <br>
+                           
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+            <table id="sess6" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Trabalho</th>       
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr >
+                        <td><strong>15:10</strong></td>
+                        <td >
+                            Increasing Test Coverage by Automating BDD Tests in Proofs of Concepts (POCs) using LLM
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos 
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Shexmo Santos (Federal University of Sergipe - Brasil)
+                            <br>
+                            Raiane Fernandes (Federal University of Sergipe - Brasil)
+                            <br>   
+                            Marcos Cesar Barbosa dos Santos (Universidade Federal de Sergipe - Brasil)
+                            <br>
+                            Michel Soares (Federal University of Sergipe - Brasil)
+                            <br>
+                            Fabio Rocha (Universidade Federal de Sergipe - Brasil)
+                            <br>
+                            Sabrina Marczak (PUCRS - Brasil)
+                        </td>
+                    </tr>    
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script>
+        function mostrarDia(dia, botao) {
+            // Ocultar todas as tabelas
+            var dias = document.querySelectorAll('.tabela-programacao');
+            dias.forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            // Mostrar a tabela correspondente ao botão clicado
+            document.getElementById(dia).style.display = 'table';
+
+            // Remover a classe "active" de todos os botões
+            var botoes = document.querySelectorAll('.botoes-dias button');
+            botoes.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Adicionar a classe "active" ao botão clicado
+            botao.classList.add('active');
+        }
+
+        // Mostrar o primeiro dia por padrão
+        window.onload = function() {
+            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
+        };
+
+    </script>
+</body>
+</html>
