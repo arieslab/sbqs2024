@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação do SBQS 2024</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <button class="floating-button" onclick="window.location.href='https://sbqs.sbc.org.br/2024/index.php/pt/'" >
+        <i class="fas fa-arrow-left icon"></i> <!-- Ícone de voltar -->
+    </button>
+
+    <!-- Botão de selecionar língua -->
+     <button id="float-button-en" class="floating-button-lang" onclick="switchLanguage('pt')">
+        <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" class="flag-icon" alt="Brasil"></a>
+    </button>
+
+    
+    <header>
+       
+        <img src="img/LOGO_SBQS.png" alt="Logo do Evento" class="logo">
+    </header>
+
+    <section class="programacao">
+  
+        <!-- Botões de Data -->
+        <div id='botoes-dias-pt' class="botoes-dias">
+            <h1 id="programa-h1-pt">Event Schedule</h1>
+           
+            <h4 id="programa-info-pt">Tap each event to learn more information.</h4>
+            
+            <button id="dia-um-pt" class="active" onclick="mostrarDia('dia1', this)">11/05/2024</button>
+            <button id="dia-dois-pt" onclick="mostrarDia('dia2', this)">11/06/2024</button>
+            <button id="dia-tres-pt" onclick="mostrarDia('dia3', this)">11/07/2024</button>
+            <button id="dia-quatro-pt" onclick="mostrarDia('dia4', this)">11/08/2024</button>
+
+            
+        </div>
+
+        <div id='botoes-dias-en' style="display: none;" class="botoes-dias">
+            <h1 id="programa-h1-en" >Event Schedule</h1>
+            <h4 id="programa-info-en" style="display: none;"> Tap each event to learn more information.</h4>
+
+            <button id="dia-um-en" class="active" onclick="mostrarDia('dia1', this)">11/05/2024</button>
+            <button id="dia-dois-en"  onclick="mostrarDia('dia2', this)">11/06/2024</button>
+            <button id="dia-tres-en"  onclick="mostrarDia('dia3', this)">11/07/2024</button> 
+            <button id="dia-quatro-en"  onclick="mostrarDia('dia4', this)">11/08/2024</button>
+
+            
+        </div>
+
+
+            
+
+        <!-- Tabela de Programação PT -->
+        <div id="table-shedule-pt" class="tabelas-programacao">
+            <table id="dia1" class="tabela-programacao">
+                <thead>
+                    <tr>
+                        <th>Time</th>         
+                        <th>Raul Chaves Space</th>
+                        <th>Auditorium 02</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr >
+                        <td><strong>08:00AM to 08:30AM</strong></td>
+                        <td colspan="2" style="background-color: #59575757">Registration</td>
+                            
+                    </tr>
+                    <tr >
+                        <td><strong>08:30AM to 09:00AM</strong></td>
+                        <td  rowspan="1" onclick="openModalTrilha('WTDQS')" style="background-color: #6df79f72"><a href="pt/wtdqs.html">WTDQS</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>09:30AM to 10:00AM</strong></td>
+                        <td style="background-color: #6df79f72"><a href="pt/wtdqs.html">WTDQS</a></td>
+
+                    
+                        <td></td>         
+                    </tr>
+                    <tr>
+                        <td><strong>10:00AM to 10:30AM</strong></td>
+                        <td colspan="2" style="background-color: #59575757">Coffee break</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10:30AM to 11:00AM</strong></td>
+                        <td style="background-color: #efe94a72"><a href="pt/cticqs.html">CTICQS</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>11:00AM to 12:00AM</strong></td>
+                        <td style="background-color: #efe94a72"><a href="pt/cticqs.html">CTICQS</a></td>
+                        <td></td>      
+                    </tr>
+                   
+                    <tr>
+                        <td><strong>12:00PM to 12:30PM</strong></td>
+                        <td colspan="2" style="background-color: #59575757">Lunch</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td><strong>01:30PM to 02:00PM</strong></td>
+                        <td style="background-color: #4ad1ef72"><a href="pt/ctdqs-1.html">CTDQS</a></td>
+                        <td></td>    
+                    </tr>
+                    <tr>
+                        <td><strong>02:00PM to 03:00PM</strong></td>
+                        <td style="background-color: #4ad1ef72"><a href="pt/ctdqs-1.html">CTDQS</a></td>
+                        <td></td>  
+                    </tr>
+
+                    <tr>
+                        <td><strong>03:00PM to 03:30PM</strong></td>
+                        <td colspan="2" style="background-color: #59575757">Coffee break</td>
+                       
+                    </tr>
+               
+                    <tr>
+                        <td><strong>04:00PM to 04:30PM</strong></td>
+                        <td style="background-color: #4ad1ef72"><a href="pt/ctdqs-2.html">CTDQS</a></td>
+                        <td></td>  
+                    </tr>
+                    <tr>
+                        <td><strong>04:30PM to 05:30to</strong></td>
+                        <td style="background-color: #4ad1ef72"><a href="pt/ctdqs-2.html">CTDQS</a></td>
+                        <td></td>    
+                    </tr>
+                   
+                    <tr>
+                        <td><strong>05:30PM to 06:00PM</strong></td>
+                        <td></td>
+                        <td></td>   
+                    </tr>   
+                </tbody>
+
+                <table id="dia2" class="tabela-programacao">
+                    <thead>
+                        <tr>
+                            <th>Time</th>         
+                            <th>Raul Chaves Space</th>
+                            <th>Auditorium 02</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>08:00AM to 09:00AM</strong></td>
+                            <td colspan="2" style="background-color: #59575757">Registration</td>
+                              
+                        </tr>
+                        <tr>
+                            <td><strong>09:30AM to 10:00AM</strong></td>
+                            <td colspan="2" style="background-color: #6df7e25f">Opening</td>
+                           
+                        </tr>
+                        <tr>
+                            <td><strong>10:00AM to 10:30AM</strong></td>
+                            <td colspan="2" style="background-color: #59575757">Coffee break</td>
+                             
+                        </tr>
+                        <tr>
+                            <td><strong>10:30AM to 12:00AM</strong></td>
+                            <td onclick="openModal('Palestra_Marcio')" colspan="2" style="background-color: #ef9a4a72"><a>Keynote - Márcio Ribeiro</a></td>
+                           
+                        </tr>
+                       
+                       
+                        <tr>
+                            <td><strong>12:00PM to 12:30PM</strong></td>
+                            <td colspan="2" style="background-color: #59575757">Lunch</td>
+                              
+                        </tr>
+                      
+                        <tr>
+                            <td><strong>01:30PM to 03:10PM</strong></td>
+                            <td style="background-color: #d3ef4a72"><a href="pt/sessao-tecnica-1A.html">Sessão Técnica 1A - Artificial Intelligence, Data Science and Software Quality</a> </td>
+                            <td style="background-color: #d3ef4a72"><a href="pt/sessao-tecnica-1B.html">Sessão Técnica 1B - Test</a> </td>   
+                        </tr>
+                        <tr>
+                            <td><strong>03:30PM to 04:00PM</strong></td>
+                            <td colspan="2" style="background-color: #59575757">Coffee break</td>
+                          
+                        </tr>
+                      
+                        <tr>
+                            <td><strong>04:00PM to 05:40PM</strong></td>
+                            <td style="background-color: #b24aef72"><a href="pt/sessao-tecnica-2A.html">Sessão Técnica 2A - Software Quality Education - Techniques, Methods, and Tools</a></td>
+                            <td style="background-color: #b24aef72"><a href="pt/sessao-tecnica-2B.html">Sessão Técnica 2B - Code Quality</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>05:40PM to 07:00PM</strong></td>
+                            <td></td>
+                            <td></td>  
+                        </tr>
+                        <tr>
+                            <td><strong>07:00PM to 07:30PM</strong></td>
+                            <td colspan="2" style="background-color: #43434372">Dinner (por adesão)</td>
+                             
+                        </tr>
+                    </tbody>
+
+                    <table id="dia3" class="tabela-programacao">
+                        <thead>
+                            <tr>
+                                <th>Time</th>         
+                                <th>Raul Chaves Space</th>
+                                <th>Auditorium 02</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>08:00AM to 08:30AM</strong></td>
+                                <td colspan="2" style="background-color: #59575757">Registration</td>
+                                    
+                            </tr>
+                            <tr>
+                                <td><strong>08:30AM to 09:00AM</strong></td>
+                                <td style="background-color: #98a4f972"><a href="pt/sessao-tecnica-3A.html">Sessão Técnica 3A - Educação em Qualidade de Software</a></td>
+                                <td style="background-color: #98a4f972"><a href="pt/sessao-tecnica-3B.html">Sessão Técnica 3B - Code and Low Code</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>09:00AM to 09:30AM</strong></td>
+                                <td style="background-color: #98a4f972"><a href="pt/sessao-tecnica-3A.html">Sessão Técnica 3A - Educação em Qualidade de Software</a></td>
+                                <td style="background-color: #98a4f972"><a href="pt/sessao-tecnica-3B.html">Sessão Técnica 3B - Code and Low Code</a></td>      
+                            </tr>
+
+                            <tr>
+                                <td><strong>09:30AM to 10:30AM</strong></td>
+                                <td colspan="2" style="background-color: #59575757">Coffee break</td>
+                            </tr>
+                            <tr>
+                                <td><strong>10:30AM to 12:00PM</strong></td>
+                                <td onclick="openModal('Palestra_Alexander')"  colspan="2" style="background-color: #ef9a4a72"><a>Keynote - Alexander Serbrenik</a></td>
+                               
+                            </tr>
+                          
+                           
+                            <tr>
+                                <td><strong>12:00PM to 01:30PM</strong></td>
+                                <td colspan="2" style="background-color: #59575757">Lunch</td>
+                               
+                            </tr>
+                          
+                            <tr>
+                                <td><strong>01:30PM to 03:10PM</strong></td>
+                                <td style="background-color: #d6ef4a72"><a href="pt/sessao-tecnica-4A.html">Sessão Técnica 4A - New Perspectives in Software Organizations Management</a></td>
+                                <td style="background-color: #d6ef4a72"><a href="pt/sessao-tecnica-4B.html">Sessão Técnica 4B - Requirements & Software Quality</a> </td>   
+                            </tr>
+                            <tr>
+                                <td><strong>03:30PM to 04:00PM</strong></td>
+                                <td colspan="2" style="background-color: #59575757">Coffee break</td>
+                               
+                            </tr>
+                          
+                            <tr>
+                                <td><strong>04:00PM to 05:00PM</strong></td>
+                                <td style="background-color: #efc64a72"><a href="pt/sessao-tecnica-5A.html">Sessão Técnica 5A - Requirements Engineering - Practices, Solutions, and Education</a></td>
+                                <td style="background-color: #efc64a72"><a href="pt/sessao-tecnica-5B.html">Sessão Técnica 5B - Agile and Software Management</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>05:00PM to 06:00PM</strong></td>
+                                <td style="background-color: #efc64a72"><a href="pt/sessao-tecnica-5A.html">Sessão Técnica 5A - Requirements Engineering - Practices, Solutions, and Education</a></td>
+                                <td style="background-color: #efc64a72"><a href="pt/sessao-tecnica-5B.html">Sessão Técnica 5B - Agile and Software Management</a></td>
+                            </tr>
+                       
+                            <tr>
+                                <td><strong>06:00PM to 07:30PM</strong></td>
+                                <td colspan="2" style="background-color: #1d7d4d72">Steering Committee Meeting</td>
+                               
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table id="dia4" class="tabela-programacao">
+                        <thead>
+                            <tr>
+                                <th>Time</th>         
+                                <th>Raul Chaves Space</th>
+                                <th>Auditorium 02</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>08:00AM to 08:30AM </strong></td>
+                                <td colspan="2" style="background-color: #59575757">Registration</td>    
+                            </tr>
+                            <tr>
+                                <td><strong>08:30AM  to 09:00AM </strong></td>
+                                <td style="background-color: #4a60ef72"><a href="pt/sessao-tecnica-6A.html">Sessão Técnica 6A - Integrating ChatGPT in Software Quality Education</a></td>
+                                <td style="background-color: #4a60ef72"><a href="pt/sessao-tecnica-6B.html">Sessão Técnica 6B - Industry and Academia</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>09:00AM  to 09:30AM </strong></td>
+                                <td style="background-color: #4a60ef72"><a href="pt/sessao-tecnica-6A.html">Sessão Técnica 6A - Integrating ChatGPT in Software Quality Education</a></td>
+                                <td style="background-color: #4a60ef72"><a href="pt/sessao-tecnica-6B.html">Sessão Técnica 6B - Industry and Academia</a></td>    
+                            </tr>
+                            <tr>
+                                <td><strong>10:30AM  to 12:00PM</strong></td>
+                                <td onclick="openModal('Palestra_Sheila')" colspan="2" style="background-color: #ef9a4a72"><a>Keynote - Sheila Reinehr</a></td>
+                                <td ></td>
+                            </tr>
+                            <tr>
+                                <td><strong>12:00PM to 01:00PM</strong></td>
+                                <td ></td>
+                                <td ></td>    
+                            </tr>
+                           
+                            
+                        </tbody>
+                    </table>
+
+            <!-- Adicione mais tabelas para os outros dias aqui -->
+        </div>
+
+
+    </section>
+
+    <footer></footer>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Foto do Palestrante">
+            <h3 id="modalName">Nome do Palestrante</h3>
+            <h4 id="modalTitle">Título da Palestra</h4>
+        </div>
+    </div>
+
+    <script>
+        function mostrarDia(dia, botao) {
+            // Ocultar todas as tabelas
+            var dias = document.querySelectorAll('.tabela-programacao');
+            dias.forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            // Mostrar a tabela correspondente ao botão clicado
+            document.getElementById(dia).style.display = 'table';
+
+            // Remover a classe "active" de todos os botões
+            var botoes = document.querySelectorAll('.botoes-dias button');
+            botoes.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Adicionar a classe "active" ao botão clicado
+            botao.classList.add('active');
+        }
+
+        // Mostrar o primeiro dia por padrão
+        window.onload = function() {
+            mostrarDia('dia1', document.querySelector('.botoes-dias button.active'));
+        };
+
+        function openModal(palestrante) {
+            const modal = document.getElementById("myModal");
+            const image = document.getElementById("modalImage");
+            const name = document.getElementById("modalName");
+            const title = document.getElementById("modalTitle");
+            const summary = document.getElementById("modalSummary");
+
+            if (palestrante === 'Palestra_Alexander') {
+                image.src = 'img/Alexander_Palestra.jpeg'; // URL da foto
+                name.innerText = 'Alexander Serebrenik';
+                title.innerText = 'Emotions and Software Developers';
+               
+            } else if (palestrante === 'Palestra_Marcio') {
+                image.src = 'img/Marcio_Ribeiro_Palestra.jpeg'; // URL da foto
+                name.innerText = 'Márcio Ribeiro';
+                title.innerText = 'Test Smells: Light to Expose, Camera to Analyze, Action to Remove';
+                
+            } else if (palestrante === 'Palestra_Sheila') {
+                image.src = 'img/Sheila_Palestra.jpeg'; // URL da foto
+                name.innerText = 'Sheila Reinehr';
+                title.innerText = '';
+                
+            }
+
+            
+
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+         // Função para alternar o menu de idiomas
+         function toggleLanguageMenu() {
+            var menu = document.getElementById('languageMenu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+
+       
+
+        
+
+    </script>
+</body>
+</html>
