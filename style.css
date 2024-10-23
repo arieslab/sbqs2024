@@ -229,6 +229,17 @@ img {
     right: 20px;
 }
 
+.footnote {
+    font-size: 0.8em;
+    vertical-align: super;
+    text-decoration: none;
+}
+
+.footnote-text {
+    font-size: 0.8em;
+    margin-top: 10px;
+    text-align: center; /* Centraliza a nota de rodapé */
+}
 
  /* Estilos responsivos para telas menores */
  @media screen and (max-width: 200px) {
