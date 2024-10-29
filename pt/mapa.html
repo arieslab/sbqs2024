@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como chegar no SBQS? - SBQS </title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+</head>
+<body>
+
+    <a href="../index.html"><button class="floating-button" >
+       <i class="fas fa-arrow-left icon"></i>  <!-- Ícone de voltar -->
+    </button></a>
+    <button id="float-button-en" class="floating-button-lang" onclick="switchLanguage('pt')">
+        <a href="../en/technical-session-1A.html"><img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" class="flag-icon" alt="USA"></a>
+    </button>
+    
+    <header>
+       
+        <img src="../img/LOGO_SBQS.png" alt="Logo do Evento" class="logo">
+    </header>
+
+    <section class="programacao">
+
+        <h1>Como chegar ao SBQS?</h1>
+        <p>Veja no mapa abaixo a localização exata do local:</p>
+        <div id="map"></div>
+    </section>
+
+   
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+ <script>
+
+    var tileLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+        {
+            attribution: false
+        });
+
+    var map = L.map('map',
+        {
+            zoomControl: true,
+            layers: [tileLayer],
+            maxZoom: 18,
+            minZoom: 6
+        })
+        .setView([-12.996005913815557, -38.52115270382874], 19);
+
+    var marker = L.marker([-12.996005913815557, -38.52115270382874]).addTo(map);
+    
+    setTimeout(function () { map.invalidateSize() }, 800);
+</script>
+
+</body>
+</html>

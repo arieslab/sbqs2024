@@ -220,6 +220,28 @@ img {
     background-color: #fcce54ff; /* Cor ao passar o mouse */
 }
 
+.float-button-mapa {
+    position: fixed; /* Fixa o botão na tela */
+    top: 180px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    background-color: rgb(214, 214, 214);/* Cor de fundo com opacidade */
+    color: white; /* Cor do texto */
+    border: none; /* Remove bordas */
+    border-radius: 50%; /* Forma circular */
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão */
+    display: flex; /* Flexbox para centralizar ícone */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Efeito de transição ao passar o mouse */
+}
+
+.float-button-mapa:hover {
+    background-color: #1b8d82ff; /* Cor ao passar o mouse */
+}
+
 .icon {
     font-size: 24px; /* Tamanho do ícone */
 }
@@ -239,6 +261,18 @@ img {
     font-size: 0.8em;
     margin-top: 10px;
     text-align: center; /* Centraliza a nota de rodapé */
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
 }
 
  /* Estilos responsivos para telas menores */
