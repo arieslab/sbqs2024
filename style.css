@@ -275,6 +275,21 @@ body {
     text-align: center;
 }
 
+.container {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px;
+}
+.container img {
+    max-width: 400px; /* Aumentando o tamanho da imagem */
+    margin-right: 20px;
+    border-radius: 8px;
+}
+.texto-palestra {
+    max-width: 600px;
+    text-align: justify;
+}
+
  /* Estilos responsivos para telas menores */
  @media screen and (max-width: 200px) {
     table {
