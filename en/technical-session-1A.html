@@ -32,13 +32,7 @@
             <h3>Wednesday (11/06/2024)</h1>
             <h3>Location: Raul Chaves Space</h1>
             <h4>Coordinator: Márcia Sampaio Lima</h4>
-            <!-- 
-            <button class="active" onclick="mostrarDia('sess1', this)">01:30 PM</button>
-            <button onclick="mostrarDia('sess2', this)">01:50 PM</button>
-            <button onclick="mostrarDia('sess3', this)">02:10 PM</button>
-            <button onclick="mostrarDia('sess4', this)">02:30 PM</button>
-            <button onclick="mostrarDia('sess5', this)">02:50 PM</button>
-            <button onclick="mostrarDia('sess6', this)">03:10 PM</button>-->
+          
         </div>
 
         <!-- Tabela de Programação -->
@@ -112,29 +106,6 @@
                     <tr >
                         <td><strong>02:30 PM</strong></td>
                         <td >
-                            Quality of big data systems: a systematic review - practices, method, and tools
-                            <br><br>
-                            <strong>Track: </strong> <br>
-                            Technical papers 
-                            <br><br>
-                            <strong>Authors:</strong> 
-                            <br>
-                            Icaro de Oliveira (Ceará State University (UECE) - Brasil)
-                            <br>
-                            Joao Matheus Lima (Ceará State University (UECE) - Brasil)
-                            <br>   
-                            Samuel Cristhian (Universidade Estadual do Ceará - Brasil)
-                            <br>
-                            Ismayle Sousa Santos (Universidade Estadual do Ceará - Brasil)
-                            <br>
-                            Rossana Andrade (Universidade Federal do Ceará - UFC - Brasil)
-                            <br>
-                        </td>
-                    </tr> 
-
-                    <tr >
-                        <td><strong>02:50 PM</strong></td>
-                        <td >
                             AI in Service of Software Quality: How ChatGPT and Personas Are Transforming Exploratory Testing
                             <br><br>
                             <strong>Track: </strong> <br>
@@ -148,12 +119,11 @@
                             <br>   
                             Ana Carolina Oran (Universidade Federal do Amazonas - Brazil)
                             <br>
-                           
                         </td>
                     </tr> 
 
                     <tr >
-                        <td><strong>03:10 PM</strong></td>
+                        <td><strong>02:50 PM</strong></td>
                         <td >
                             Increasing Test Coverage by Automating BDD Tests in Proofs of Concepts (POCs) using LLM
                             <br><br>
@@ -173,68 +143,30 @@
                             Fabio Rocha (Universidade Federal de Sergipe - Brasil)
                             <br>
                             Sabrina Marczak (PUCRS - Brasil)
+                           
                         </td>
                     </tr> 
-                </tbody>
-            </table>
-            
-            <table id="sess2" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
-                    </tr>
-                </thead>
-                <tbody>    
-                      
-                </tbody>
-            </table>
 
-            <table id="sess3" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
-                    </tr>
-                </thead>
-                <tbody>    
-                    
-                </tbody>
-            </table>
-
-            <table id="sess4" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
-                    </tr>
-                </thead>
-                <tbody>    
-                      
-                </tbody>
-            </table>
-
-            <table id="sess5" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
-                    </tr>
-                </thead>
-                <tbody>    
-                      
-                </tbody>
-            </table>
-
-            <table id="sess6" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
-                    </tr>
-                </thead>
-                <tbody>    
-                     
+                    <tr >
+                        <td><strong>03:10 PM</strong></td>
+                        <td >
+                            Towards Role Definition in Agile AI-based System Development: Perspectives and Reflections
+                            <br><br>
+                            <strong>Track: </strong> <br>
+                            Technical papers 
+                            <br><br>
+                            <strong>Authors:</strong> 
+                            <br>
+                            Francisco Carlos Souza (Universidade Tecnológica Federal do Paraná - Brasil)
+                            <br>
+                            Alinne Souza (Universidade Tecnológica Federal do Paraná - Brasil)
+                            <br>   
+                            Bruno Faustino Amorim (Universidade Tecnológica Federal do Paraná - Brasil)
+                            <br>
+                            Thiago Cordeiro (Universidade Federal de Alagoas - Brasil)
+                            <br>
+                        </td>
+                    </tr> 
                 </tbody>
             </table>
 
@@ -244,33 +176,5 @@
     <footer class="footnote-text">
         <p > © Created by Aries Lab by Joselito Júnior - 2024 </p>
     </footer>
-
-    <script>
-        function mostrarDia(dia, botao) {
-            // Ocultar todas as tabelas
-            var dias = document.querySelectorAll('.tabela-programacao');
-            dias.forEach(function(el) {
-                el.style.display = 'none';
-            });
-
-            // Mostrar a tabela correspondente ao botão clicado
-            document.getElementById(dia).style.display = 'table';
-
-            // Remover a classe "active" de todos os botões
-            var botoes = document.querySelectorAll('.botoes-dias button');
-            botoes.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-
-            // Adicionar a classe "active" ao botão clicado
-            botao.classList.add('active');
-        }
-
-        // Mostrar o primeiro dia por padrão
-        window.onload = function() {
-            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
-        };
-
-    </script>
 </body>
 </html>

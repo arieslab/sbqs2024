@@ -32,12 +32,14 @@
             <h3>Quarta-feira (06/11/2024)</h1>
             <h3>Local: Espaço Raul Chaves </h1>
             <h4>Coordenadora: Márcia Sampaio Lima </h4>
+            <!--
             <button class="active" onclick="mostrarDia('sess1', this)">13:30</button>
             <button onclick="mostrarDia('sess2', this)">13:50</button>
             <button onclick="mostrarDia('sess3', this)">14:10</button>
             <button onclick="mostrarDia('sess4', this)">14:30</button>
             <button onclick="mostrarDia('sess5', this)">14:50</button>
             <button onclick="mostrarDia('sess6', this)">15:10</button>
+            -->
         </div>
 
         <!-- Tabela de Programação -->
@@ -50,7 +52,7 @@
                     </tr>
                 </thead>
                 <tbody>    
-                    <tr >
+                    <tr>
                         <td><strong>13:30</strong></td>
                         <td >
                             Trust in AI: Perspectives of C-Level Executives in Brazilian Organizations
@@ -69,19 +71,8 @@
                             Edna Canedo (Universidade de Brasília - Brasil)
                             <br>
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-            
-            <table id="sess2" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
-                    <tr >
+                    <tr>
                         <td><strong>13:50</strong></td>
                         <td >
                             Impact of Generative AI Technologies on Software Development Professionals' Perceptions of Job Security
@@ -99,19 +90,8 @@
                             <br>
                             
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess3" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
-                    <tr >
+                    <tr>
                         <td><strong>14:10</strong></td>
                         <td >
                             Investigating Software Development Teams Members? Perceptions of Data Privacy in the Use of Large Language Models (LLMs)
@@ -126,53 +106,10 @@
                             Edna Canedo (Universidade de Brasília - UNB - Brasil)
                             <br>       
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess4" class="tabela-programacao">
-                <thead>
+                    </tr> 
+                    
                     <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
-                    </tr>
-                </thead>
-                <tbody>    
-                    <tr >
                         <td><strong>14:30</strong></td>
-                        <td >
-                            Quality of big data systems: a systematic review - practices, method, and tools
-                            <br><br>
-                            <strong>Trilha: </strong> <br>
-                            Trabalhos Técnicos 
-                            <br><br>
-                            <strong>Autores:</strong> 
-                            <br>
-                            Icaro de Oliveira (Ceará State University (UECE) - Brasil)
-                            <br>
-                            Joao Matheus Lima (Ceará State University (UECE) - Brasil)
-                            <br>   
-                            Samuel Cristhian (Universidade Estadual do Ceará - Brasil)
-                            <br>
-                            Ismayle Sousa Santos (Universidade Estadual do Ceará - Brasil)
-                            <br>
-                            Rossana Andrade (Universidade Federal do Ceará - UFC - Brasil)
-                            <br>
-                        </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess5" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
-                    </tr>
-                </thead>
-                <tbody>    
-                    <tr >
-                        <td><strong>14:50</strong></td>
                         <td >
                             AI in Service of Software Quality: How ChatGPT and Personas Are Transforming Exploratory Testing
                             <br><br>
@@ -189,20 +126,10 @@
                             <br>
                            
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
+                    </tr> 
 
-            <table id="sess6" class="tabela-programacao">
-                <thead>
                     <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
-                    </tr>
-                </thead>
-                <tbody>    
-                    <tr >
-                        <td><strong>15:10</strong></td>
+                        <td><strong>14:50</strong></td>
                         <td >
                             Increasing Test Coverage by Automating BDD Tests in Proofs of Concepts (POCs) using LLM
                             <br><br>
@@ -223,43 +150,35 @@
                             <br>
                             Sabrina Marczak (PUCRS - Brasil)
                         </td>
-                    </tr>    
+                    </tr>  
+
+                    <tr>
+                        <td><strong>15:10</strong></td>
+                        <td >
+                            Towards Role Definition in Agile AI-based System Development: Perspectives and Reflections
+                            <br><br>
+                            <strong>Trilha: </strong> <br>
+                            Trabalhos Técnicos 
+                            <br><br>
+                            <strong>Autores:</strong> 
+                            <br>
+                            Francisco Carlos Souza (Universidade Tecnológica Federal do Paraná - Brasil)
+                            <br>
+                            Alinne Souza (Universidade Tecnológica Federal do Paraná - Brasil)
+                            <br>   
+                            Bruno Faustino Amorim (Universidade Tecnológica Federal do Paraná - Brasil)
+                            <br>
+                            Thiago Cordeiro (Universidade Federal de Alagoas - Brasil)
+                            <br>
+                        </td>
+                    </tr> 
                 </tbody>
             </table>
-
         </div>
     </section>
 
     <footer class="footnote-text">
         <p > © Criado pelo Aries Lab por Joselito Júnior - 2024 </p>
     </footer>
-
-    <script>
-        function mostrarDia(dia, botao) {
-            // Ocultar todas as tabelas
-            var dias = document.querySelectorAll('.tabela-programacao');
-            dias.forEach(function(el) {
-                el.style.display = 'none';
-            });
-
-            // Mostrar a tabela correspondente ao botão clicado
-            document.getElementById(dia).style.display = 'table';
-
-            // Remover a classe "active" de todos os botões
-            var botoes = document.querySelectorAll('.botoes-dias button');
-            botoes.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-
-            // Adicionar a classe "active" ao botão clicado
-            botao.classList.add('active');
-        }
-
-        // Mostrar o primeiro dia por padrão
-        window.onload = function() {
-            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
-        };
-
-    </script>
 </body>
 </html>
