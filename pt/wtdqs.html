@@ -31,10 +31,7 @@
             <h3>Segunda-feira (05/11/2024)</h1>
             <h3>Local: Espaço Raul Chaves </h1>
             <h4>Coordenadores: Bruno Gadelha (UFAM) e Rodrigo Santos (UNIRIO) </h4>
-            <button class="active" onclick="mostrarDia('sess1', this)">08:30</button>
-            <button onclick="mostrarDia('sess2', this)">09:00</button>
-            <button onclick="mostrarDia('sess3', this)">09:30</button>
-            <button onclick="mostrarDia('sess4', this)">10:00</button>
+            <h4>Board: Adriano Albuquerque (Unifor), Breno França (Unicamp) & Monalessa Barcellos (UFES)</h4>
         </div>
 
         <!-- Tabela de Programação -->
@@ -61,18 +58,7 @@
                             <br>
                             Fabio Rocha (UFS)
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-            
-            <table id="sess2" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>09:00</strong></td>
                         <td >
@@ -87,18 +73,7 @@
                             <br>
                             Johnny Marques (ITA)
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess3" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>09:30</strong></td>
                         <td >
@@ -115,18 +90,7 @@
                             <br>
                             Jeferson Vieira (UFC)
                         </td>
-                    </tr>    
-                </tbody>
-            </table> 
-
-            <table id="sess4" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>10:00</strong></td>
                         <td >
@@ -143,7 +107,7 @@
                             <br>
                             Cleyton Rodrigues (UFPE)
                         </td>
-                    </tr>    
+                    </tr>           
                 </tbody>
             </table>
         </div>
@@ -153,32 +117,6 @@
         <p > © Criado pelo Aries Lab por Joselito Júnior - 2024 </p>
     </footer>
 
-    <script>
-        function mostrarDia(dia, botao) {
-            // Ocultar todas as tabelas
-            var dias = document.querySelectorAll('.tabela-programacao');
-            dias.forEach(function(el) {
-                el.style.display = 'none';
-            });
 
-            // Mostrar a tabela correspondente ao botão clicado
-            document.getElementById(dia).style.display = 'table';
-
-            // Remover a classe "active" de todos os botões
-            var botoes = document.querySelectorAll('.botoes-dias button');
-            botoes.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-
-            // Adicionar a classe "active" ao botão clicado
-            botao.classList.add('active');
-        }
-
-        // Mostrar o primeiro dia por padrão
-        window.onload = function() {
-            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
-        };
-
-    </script>
 </body>
 </html>

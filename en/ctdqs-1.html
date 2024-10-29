@@ -32,10 +32,7 @@
             <h3>Location: Raul Chaves Space</h1>
             <h4>Coordinators: Davi Viana e Sérgio Soares</h4>
             <h4>Examination board: Alfredo Goldman (USP), Anna Beatriz Marques (UFC) e Carla Silva (UFPE)</h4>
-            <button class="active" onclick="mostrarDia('sess1', this)">01:30 PM</button>
-            <button onclick="mostrarDia('sess2', this)">02:00 PM</button>
-            <button onclick="mostrarDia('sess3', this)">02:30 PM</button>
-            <button onclick="mostrarDia('sess4', this)">03:00 PM</button>
+            
         </div>
 
         <!-- Tabela de Programação -->
@@ -64,18 +61,7 @@
                             <br>
                             Marcos Kalinowski (PUC-Rio)
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-            
-            <table id="sess2" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>02:00 PM</strong></td>
                         <td >
@@ -96,18 +82,7 @@
                             <br>
                             Paulo Malcher (UFRA & UNIRIO)
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess3" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>02:30 PM</strong></td>
                         <td >
@@ -125,18 +100,7 @@
                             Marcos Kalinowski (PUC-Rio)
                             
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess4" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>03:00 PM</strong></td>
                         <td>
@@ -147,7 +111,7 @@
                            
     
                         </td>
-                    </tr>    
+                    </tr>       
                 </tbody>
             </table>
         </div>
@@ -156,33 +120,5 @@
     <footer class="footnote-text">
         <p > © Created by Aries Lab by Joselito Júnior - 2024 </p>
     </footer>
-
-    <script>
-        function mostrarDia(dia, botao) {
-            // Ocultar todas as tabelas
-            var dias = document.querySelectorAll('.tabela-programacao');
-            dias.forEach(function(el) {
-                el.style.display = 'none';
-            });
-
-            // Mostrar a tabela correspondente ao botão clicado
-            document.getElementById(dia).style.display = 'table';
-
-            // Remover a classe "active" de todos os botões
-            var botoes = document.querySelectorAll('.botoes-dias button');
-            botoes.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-
-            // Adicionar a classe "active" ao botão clicado
-            botao.classList.add('active');
-        }
-
-        // Mostrar o primeiro dia por padrão
-        window.onload = function() {
-            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
-        };
-
-    </script>
 </body>
 </html>

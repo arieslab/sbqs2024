@@ -32,10 +32,7 @@
             <h3>Local: Espaço Raul Chaves </h1>
             <h4>Coordenadores: Davi Viana e Sérgio Soares </h4>
             <h4>Banca: Heitor Costa (UFLA), Sheila Reinehr (PUCPR) e Uirá Kulesza (UFRN) </h4>
-            <button class="active" onclick="mostrarDia('sess1', this)">16:00</button>
-            <button onclick="mostrarDia('sess2', this)">16:30</button>
-            <button onclick="mostrarDia('sess3', this)">17:00</button>
-            <button onclick="mostrarDia('sess4', this)">17:30</button>
+           
         </div>
 
         <!-- Tabela de Programação -->
@@ -64,18 +61,7 @@
                             <br>
                             Marcos Kalinowski (PUC-Rio)
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-            
-            <table id="sess2" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>16:30</strong></td>
                         <td >
@@ -94,18 +80,7 @@
                             <br>
                             Márcio Ribeiro (UFAL)
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess3" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>17:00</strong></td>
                         <td >
@@ -123,18 +98,7 @@
                             Ricardo Marcacini (ICMC/USP)
                             
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess4" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>17:30</strong></td>
                         <td>
@@ -143,42 +107,16 @@
                             <br>
                             <br>
                         </td>
-                    </tr>    
+                    </tr>       
                 </tbody>
             </table>
+            
+            
         </div>
     </section>
 
     <footer class="footnote-text">
         <p > © Criado pelo Aries Lab por Joselito Júnior - 2024 </p>
     </footer>
-
-    <script>
-        function mostrarDia(dia, botao) {
-            // Ocultar todas as tabelas
-            var dias = document.querySelectorAll('.tabela-programacao');
-            dias.forEach(function(el) {
-                el.style.display = 'none';
-            });
-
-            // Mostrar a tabela correspondente ao botão clicado
-            document.getElementById(dia).style.display = 'table';
-
-            // Remover a classe "active" de todos os botões
-            var botoes = document.querySelectorAll('.botoes-dias button');
-            botoes.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-
-            // Adicionar a classe "active" ao botão clicado
-            botao.classList.add('active');
-        }
-
-        // Mostrar o primeiro dia por padrão
-        window.onload = function() {
-            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
-        };
-
-    </script>
 </body>
 </html>
