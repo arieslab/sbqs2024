@@ -29,12 +29,8 @@
             <h3>UX, Usability, Accessibility and Sustainability</h3>
             <h3>Thursday (11/07/2024) </h1>
             <h3>Location: Raul Chaves Space </h1>
-            <h4>Coordinator: Bruno Gadelha </h4>
-            <button class="active" onclick="mostrarDia('sess1', this)">08:30 AM</button>
-            <button onclick="mostrarDia('sess2', this)">08:50 AM</button>
-            <button onclick="mostrarDia('sess3', this)">09:10 AM</button>
-            <button onclick="mostrarDia('sess4', this)">09:30 AM</button>
-       
+            <h4>Coordinator: Bruno Gadelha (UFAM) </h4>
+           
         </div>
 
         <!-- Tabela de Programação -->
@@ -142,33 +138,5 @@
     <footer class="footnote-text">
         <p > © Created by Aries Lab by Joselito Júnior - 2024 </p>
     </footer>
-
-    <script>
-        function mostrarDia(dia, botao) {
-            // Ocultar todas as tabelas
-            var dias = document.querySelectorAll('.tabela-programacao');
-            dias.forEach(function(el) {
-                el.style.display = 'none';
-            });
-
-            // Mostrar a tabela correspondente ao botão clicado
-            document.getElementById(dia).style.display = 'table';
-
-            // Remover a classe "active" de todos os botões
-            var botoes = document.querySelectorAll('.botoes-dias button');
-            botoes.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-
-            // Adicionar a classe "active" ao botão clicado
-            botao.classList.add('active');
-        }
-
-        // Mostrar o primeiro dia por padrão
-        window.onload = function() {
-            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
-        };
-
-    </script>
 </body>
 </html>
