@@ -50,11 +50,48 @@
             minZoom: 6
         })
         .setView([-12.996005913815557, -38.52115270382874], 19);
-
-    var marker = L.marker([-12.996005913815557, -38.52115270382874]).addTo(map);
     
+    var greenIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+    
+    var marker = L.marker([-12.996005913815557, -38.52115270382874], {icon: greenIcon}).addTo(map);
+    
+    // Função para obter a localização do usuário
+    function onLocationFound(e) {
+        const radius = e.accuracy / 2;
+
+        // Adiciona um marcador na localização do usuário
+        L.marker(e.latlng).addTo(map)
+            .bindPopup("Você está aqui!").openPopup();
+
+        // Adiciona um círculo para mostrar a precisão da localização
+        L.circle(e.latlng, radius).addTo(map);
+        
+        // Centraliza o mapa na localização do usuário
+        map.setView(e.latlng, 13);
+    }
+
+    // Função para lidar com erros ao obter a localização
+    function onLocationError(e) {
+        alert(e.message);
+    }
+
+    // Solicita a localização do usuário
+    map.locate({setView: true, maxZoom: 16});
+    map.on('locationfound', onLocationFound);
+    map.on('locationerror', onLocationError);
+
+
     setTimeout(function () { map.invalidateSize() }, 800);
-</script>
+
+    
+ </script>
 
 </body>
 </html>
