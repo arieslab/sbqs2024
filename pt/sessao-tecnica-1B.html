@@ -200,33 +200,5 @@
     <footer class="footnote-text">
         <p > © Criado pelo Aries Lab por Joselito Júnior - 2024 </p>
     </footer>
-
-    <script>
-        function mostrarDia(dia, botao) {
-            // Ocultar todas as tabelas
-            var dias = document.querySelectorAll('.tabela-programacao');
-            dias.forEach(function(el) {
-                el.style.display = 'none';
-            });
-
-            // Mostrar a tabela correspondente ao botão clicado
-            document.getElementById(dia).style.display = 'table';
-
-            // Remover a classe "active" de todos os botões
-            var botoes = document.querySelectorAll('.botoes-dias button');
-            botoes.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-
-            // Adicionar a classe "active" ao botão clicado
-            botao.classList.add('active');
-        }
-
-        // Mostrar o primeiro dia por padrão
-        window.onload = function() {
-            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
-        };
-
-    </script>
 </body>
 </html>
