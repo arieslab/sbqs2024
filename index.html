@@ -343,6 +343,7 @@
             <img id="modalImage" src="" alt="Foto do Palestrante">
             <h3 id="modalName">Nome do Palestrante</h3>
             <h4 id="modalTitle">Título da Palestra</h4>
+            <h4 >Mais informações <a id="seemore" href="/">aqui</a> </h4> 
         </div>
     </div>
 
@@ -378,21 +379,25 @@
             const name = document.getElementById("modalName");
             const title = document.getElementById("modalTitle");
             const summary = document.getElementById("modalSummary");
+            const seemore = document.getElementById("seemore");
 
             if (palestrante === 'Palestra_Alexander') {
                 image.src = 'img/Alexander_Palestra.jpeg'; // URL da foto
                 name.innerText = 'Alexander Serebrenik';
                 title.innerText = 'Emotions and Software Developers';
+                seemore.href = "https://arieslab.github.io/sbqs2024/en/palestra-2.html";
                
             } else if (palestrante === 'Palestra_Marcio') {
                 image.src = 'img/Marcio_Ribeiro_Palestra.jpeg'; // URL da foto
                 name.innerText = 'Márcio Ribeiro';
                 title.innerText = 'Test Smells: Light to Expose, Camera to Analyze, Action to Remove';
+                seemore.href = "https://arieslab.github.io/sbqs2024/en/palestra-1.html";
                 
             } else if (palestrante === 'Palestra_Sheila') {
                 image.src = 'img/Sheila_Palestra.jpeg'; // URL da foto
                 name.innerText = 'Sheila Reinehr';
                 title.innerText = '';
+                seemore.href = "https://arieslab.github.io/sbqs2024/en/palestra-3.html";
                 
             }
 
