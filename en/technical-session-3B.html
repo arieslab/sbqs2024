@@ -32,10 +32,7 @@
             <h3>Thursday (07/11/2024) </h1>
             <h3>Location: Auditorium 02 </h1>
             <h4>Coordinator: Breno França </h4>
-            <button class="active" onclick="mostrarDia('sess1', this)">08:30 AM</button>
-            <button onclick="mostrarDia('sess2', this)">08:50 AM</button>
-            <button onclick="mostrarDia('sess3', this)">09:10 AM</button>
-            <button onclick="mostrarDia('sess4', this)">09:30 AM</button>
+          
        
         </div>
 
@@ -55,7 +52,7 @@
                             Code on Demand: A Comparative Analysis of the Efficiency, Understandability, and Self-Correction Capability of Copilot, ChatGPT, and Gemini
                             <br><br>
                             <strong>Track: </strong> <br>
-                            Technical papers
+                            Research Track
                             <br><br>
                             <strong>Authors:</strong> 
                             <br>
@@ -68,25 +65,14 @@
                             Otavio Cury (Universidade Federal do Piauí - Brasil)
                             <br>
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-            
-            <table id="sess2" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>08:50 AM</strong></td>
                         <td >
                             Mining Discussions on Software Migration: A study of the Boost mailing list regarding C++ code evolution
                             <br><br>
                             <strong>Track: </strong> <br>
-                            Technical papers
+                            Research Track
                             <br><br>
                             <strong>Authors:</strong> 
                             <br>
@@ -99,25 +85,14 @@
                             Rodrigo Bonifacio (Universidade de Brasilia - Brasil)
                             <br>
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess3" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
-                    </tr>
-                </thead>
-                <tbody>    
+                    </tr> 
                     <tr >
                         <td><strong>09:10 AM</strong></td>
                         <td >
                             Low-Code Quality Metrics for Agile Software Development
                             <br><br>
                             <strong>Track: </strong> <br>
-                            Technical papers
+                            Research Track
                             <br><br>
                             <strong>Authors:</strong> 
                             <br>
@@ -128,25 +103,14 @@
                             Marcelo Marinho (Universidade Federal Rural de Pernambuco - Brasil)
                             <br>  
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess4" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>09:30 AM</strong></td>
                         <td >
                             Evaluation of low code and no code platforms as a strategy to increase productivity in software development
                             <br><br>
                             <strong>Track: </strong> <br>
-                            Technical papers
+                            Research Track
                             <br><br>
                             <strong>Authors:</strong> 
                             <br>
@@ -156,9 +120,9 @@
                             <br>   
                           
                         </td>
-                    </tr>    
+                    </tr> 
                 </tbody>
-            </table>
+            </table>         
         </div>
     </section>
 
@@ -166,32 +130,5 @@
         <p > © Created by Aries Lab by Joselito Júnior - 2024 </p>
     </footer>
 
-    <script>
-        function mostrarDia(dia, botao) {
-            // Ocultar todas as tabelas
-            var dias = document.querySelectorAll('.tabela-programacao');
-            dias.forEach(function(el) {
-                el.style.display = 'none';
-            });
-
-            // Mostrar a tabela correspondente ao botão clicado
-            document.getElementById(dia).style.display = 'table';
-
-            // Remover a classe "active" de todos os botões
-            var botoes = document.querySelectorAll('.botoes-dias button');
-            botoes.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-
-            // Adicionar a classe "active" ao botão clicado
-            botao.classList.add('active');
-        }
-
-        // Mostrar o primeiro dia por padrão
-        window.onload = function() {
-            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
-        };
-
-    </script>
 </body>
 </html>
