@@ -32,10 +32,7 @@
             <h3>Sexta-Feira (08/11/2024)</h1>
             <h3>Local: Espaço Raul Chaves </h1>
             <h4>Coordenadora: Patricia Matsubara </h4>
-            <button class="active" onclick="mostrarDia('sess1', this)">08:30</button>
-            <button onclick="mostrarDia('sess2', this)">08:50</button>
-            <button onclick="mostrarDia('sess3', this)">09:10</button>
-            <button onclick="mostrarDia('sess4', this)">09:30</button>
+        
            
         </div>
 
@@ -64,18 +61,7 @@
                             Yuska Paola Costa Aguiar (Universidade Federal da Paraíba - Brasil)
                             <br>
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-            
-            <table id="sess2" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>08:50</strong></td>
                         <td >
@@ -94,18 +80,7 @@
                             <br>
                             
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess3" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>09:10</strong></td>
                         <td >
@@ -129,18 +104,7 @@
                             Rayfran Lima (Sidia Institute | Cesar School - Brasil)
                             <br> 
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess4" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>09:30</strong></td>
                         <td >
@@ -164,42 +128,18 @@
                             Tayana Conte (Universidade Federal do Amazonas - Brasil)
                             <br>
                         </td>
-                    </tr>    
+                    </tr>            
                 </tbody>
             </table>
+            
+         
+
+           
         </div>
     </section>
 
     <footer class="footnote-text">
         <p > © Criado pelo Aries Lab por Joselito Júnior - 2024 </p>
     </footer>
-
-    <script>
-        function mostrarDia(dia, botao) {
-            // Ocultar todas as tabelas
-            var dias = document.querySelectorAll('.tabela-programacao');
-            dias.forEach(function(el) {
-                el.style.display = 'none';
-            });
-
-            // Mostrar a tabela correspondente ao botão clicado
-            document.getElementById(dia).style.display = 'table';
-
-            // Remover a classe "active" de todos os botões
-            var botoes = document.querySelectorAll('.botoes-dias button');
-            botoes.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-
-            // Adicionar a classe "active" ao botão clicado
-            botao.classList.add('active');
-        }
-
-        // Mostrar o primeiro dia por padrão
-        window.onload = function() {
-            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
-        };
-
-    </script>
 </body>
 </html>
