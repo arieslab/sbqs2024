@@ -32,13 +32,7 @@
             <h3>Thursday (11/07/2024)</h1>
             <h3>Location: Auditorium 02 </h1>
             <h4>Coordinator: Monalessa Barcellos </h4>
-            <button class="active" onclick="mostrarDia('sess1', this)">04:00 PM</button>
-            <button onclick="mostrarDia('sess2', this)">04:20 PM</button>
-            <button onclick="mostrarDia('sess3', this)">04:40 PM</button>
-            <button onclick="mostrarDia('sess4', this)">05:00 PM</button>
-            <button onclick="mostrarDia('sess5', this)">05:20 PM</button>
-            <button onclick="mostrarDia('sess6', this)">05:40 PM</button>
-            <button onclick="mostrarDia('sess7', this)">06:00 PM</button>
+           
         </div>
 
         <!-- Tabela de Programação -->
@@ -69,18 +63,7 @@
                             
                             <br>
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-            
-            <table id="sess2" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>04:20 PM</strong></td>
                         <td >
@@ -104,18 +87,7 @@
                             Manoel Mendonca (UFBA - Brasil)
                             <br> 
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess3" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>04:40 PM</strong></td>
                         <td >
@@ -132,18 +104,7 @@
                             <br>  
                            
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess4" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>05:00 PM</strong></td>
                         <td >
@@ -165,18 +126,7 @@
                             Manoel Mendonca (UFBA - Brasil)
                             <br>
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess5" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>05:20 PM</strong></td>
                         <td >
@@ -195,18 +145,7 @@
                             <br>
                             Thiago Cordeiro (Universidade Federal de Alagoas - Brasil)
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess6" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>05:40 PM</strong></td>
                         <td >
@@ -222,24 +161,9 @@
                             Taciana Novo Kudo (Universidade Federal de Goiás - UFG - Brasil)
                             <br>
                             Renato Bulcão-Neto (Universidade Federal de Goiás - Brasil)
-                            <br>
-                            
-                           
-                            
+                            <br> 
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-
-            <table id="sess7" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>06:00 PM</strong></td>
                         <td >
@@ -262,10 +186,9 @@
                             <br>
                             
                         </td>
-                    </tr>    
+                    </tr>                       
                 </tbody>
             </table>
-
         </div>
     </section>
 
@@ -273,32 +196,6 @@
         <p > © Created by Aries Lab by Joselito Júnior - 2024 </p>
     </footer>
 
-    <script>
-        function mostrarDia(dia, botao) {
-            // Ocultar todas as tabelas
-            var dias = document.querySelectorAll('.tabela-programacao');
-            dias.forEach(function(el) {
-                el.style.display = 'none';
-            });
-
-            // Mostrar a tabela correspondente ao botão clicado
-            document.getElementById(dia).style.display = 'table';
-
-            // Remover a classe "active" de todos os botões
-            var botoes = document.querySelectorAll('.botoes-dias button');
-            botoes.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-
-            // Adicionar a classe "active" ao botão clicado
-            botao.classList.add('active');
-        }
-
-        // Mostrar o primeiro dia por padrão
-        window.onload = function() {
-            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
-        };
-
-    </script>
+    
 </body>
 </html>

@@ -32,13 +32,7 @@
             <h3>Quinta-Feira (07/11/2024)</h1>
             <h3>Local: Espaço Raul Chaves </h1>
             <h4>Coordenadora: Sheila Reinehr </h4>
-            <button class="active" onclick="mostrarDia('sess1', this)">16:00</button>
-            <button onclick="mostrarDia('sess2', this)">16:20</button>
-            <button onclick="mostrarDia('sess3', this)">16:40</button>
-            <button onclick="mostrarDia('sess4', this)">17:00</button>
-            <button onclick="mostrarDia('sess5', this)">17:20</button>
-            <button onclick="mostrarDia('sess6', this)">17:40</button>
-            <button onclick="mostrarDia('sess7', this)">18:00</button>
+         
         </div>
 
         <!-- Tabela de Programação -->
@@ -57,7 +51,7 @@
                             Investigating Solutions for Social and Human Factors in Requirements Engineering
                             <br><br>
                             <strong>Trilha: </strong> <br>
-                            Trabalhos Técnicos
+                            Trilha de pesquisa
                             <br><br>
                             <strong>Autores:</strong> 
                             <br>
@@ -70,18 +64,7 @@
                             Rodrigo Santos (UNIRIO - Brasil)
                             <br>
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-            
-            <table id="sess2" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>16:20</strong></td>
                         <td >
@@ -99,18 +82,7 @@
                             Andre Freire (Universidade Federal de Lavras - Brasil)
                             <br>        
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess3" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>16:40</strong></td>
                         <td >
@@ -128,25 +100,14 @@
                             Tayana Conte (UFAM - Brasil)
                             <br> 
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess4" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>17:00</strong></td>
                         <td >
                             Assisting the Requirements Definition and Modeling of IoT applications through the ReqM4IoT tool
                             <br><br>
                             <strong>Trilha: </strong> <br>
-                            Trabalhos Técnicos
+                            Trilha de pesquisa
                             <br><br>
                             <strong>Autores:</strong> 
                             <br>
@@ -161,25 +122,14 @@
                             
                             <br>
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess5" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
-                    </tr>
-                </thead>
-                <tbody>    
+                    </tr> 
                     <tr >
                         <td><strong>17:20</strong></td>
                         <td >
                             A Comparative Study of Tools for Detecting Anomalies in Software Requirements
                             <br><br>
                             <strong>Trilha: </strong> <br>
-                            Trabalhos Técnicos
+                            Trilha de pesquisa
                             <br><br>
                             <strong>Autores:</strong> 
                             <br>
@@ -191,18 +141,7 @@
                             <br>
                            
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess6" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>17:40</strong></td>
                         <td >
@@ -231,26 +170,14 @@
                             <br>
                             
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-
-            <table id="sess7" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Trabalho</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>18:00</strong></td>
                         <td >
                             Towards Software Asset Management in Proprietary Software Ecosystems: A Participative Case Study
                             <br><br>
                             <strong>Trilha: </strong> <br>
-                            Trabalhos Técnicos
+                            Trilha de pesquisa
                             <br><br>
                             <strong>Autores:</strong> 
                             <br>
@@ -263,9 +190,20 @@
                             Rodrigo Santos (UNIRIO - Brasil)
                             <br>
                         </td>
-                    </tr>    
+                    </tr>                  
                 </tbody>
             </table>
+            
+            
+
+        
+
+          
+
+
+          
+
+
 
         </div>
     </section>
@@ -274,32 +212,5 @@
         <p > © Criado pelo Aries Lab por Joselito Júnior - 2024 </p>
     </footer>
 
-    <script>
-        function mostrarDia(dia, botao) {
-            // Ocultar todas as tabelas
-            var dias = document.querySelectorAll('.tabela-programacao');
-            dias.forEach(function(el) {
-                el.style.display = 'none';
-            });
-
-            // Mostrar a tabela correspondente ao botão clicado
-            document.getElementById(dia).style.display = 'table';
-
-            // Remover a classe "active" de todos os botões
-            var botoes = document.querySelectorAll('.botoes-dias button');
-            botoes.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-
-            // Adicionar a classe "active" ao botão clicado
-            botao.classList.add('active');
-        }
-
-        // Mostrar o primeiro dia por padrão
-        window.onload = function() {
-            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
-        };
-
-    </script>
 </body>
 </html>
