@@ -32,12 +32,6 @@
             <h3>Wednesday (11/06/2024)</h1>
             <h3>Location: Auditorium 02 </h1>
             <h4>Coordinator: José Carlos Maldonado (ICMC-USP)</h4>
-            <button class="active" onclick="mostrarDia('sess1', this)">01:30 PM</button>
-            <button onclick="mostrarDia('sess2', this)">01:50 PM</button>
-            <button onclick="mostrarDia('sess3', this)">02:10 PM</button>
-            <button onclick="mostrarDia('sess4', this)">02:30 PM</button>
-            <button onclick="mostrarDia('sess5', this)">02:50 PM</button>
-            <button onclick="mostrarDia('sess6', this)">03:10 PM</button>
         </div>
 
         <!-- Tabela de Programação -->
@@ -68,18 +62,7 @@
                             <br>
                             
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-            
-            <table id="sess2" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
-                    </tr>
-                </thead>
-                <tbody>    
+                    </tr> 
                     <tr >
                         <td><strong>01:50 PM</strong></td>
                         <td >
@@ -100,18 +83,7 @@
                             <br>
                             
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess3" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
-                    </tr>
-                </thead>
-                <tbody>    
+                    </tr>   
                     <tr >
                         <td><strong>02:10 PM</strong></td>
                         <td >
@@ -133,18 +105,7 @@
                             Jose Urbano Duarte Junior (PicPay - Brazil)
                             <br> 
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess4" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
                     </tr>
-                </thead>
-                <tbody>    
                     <tr >
                         <td><strong>02:30 PM</strong></td>
                         <td >
@@ -172,18 +133,7 @@
                             André Carvalho (Universidade Federal do Amazonas - Brazil)
                             <br>
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess5" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
-                    </tr>
-                </thead>
-                <tbody>    
+                    </tr> 
                     <tr >
                         <td><strong>02:50 PM</strong></td>
                         <td >
@@ -206,18 +156,7 @@
                             <br>
                            
                         </td>
-                    </tr>    
-                </tbody>
-            </table>
-
-            <table id="sess6" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Paper</th>       
-                    </tr>
-                </thead>
-                <tbody>    
+                    </tr>  
                     <tr >
                         <td><strong>03:10 PM</strong></td>
                         <td >
@@ -243,9 +182,14 @@
                             Ivan Machado (Universidade Federal da Bahia - Brasil)
                             <br>
                         </td>
-                    </tr>    
+                    </tr>            
                 </tbody>
             </table>
+            
+          
+
+
+          
 
         </div>
     </section>
@@ -254,32 +198,6 @@
         <p > © Created by Aries Lab by Joselito Júnior - 2024 </p>
     </footer>
 
-    <script>
-        function mostrarDia(dia, botao) {
-            // Ocultar todas as tabelas
-            var dias = document.querySelectorAll('.tabela-programacao');
-            dias.forEach(function(el) {
-                el.style.display = 'none';
-            });
 
-            // Mostrar a tabela correspondente ao botão clicado
-            document.getElementById(dia).style.display = 'table';
-
-            // Remover a classe "active" de todos os botões
-            var botoes = document.querySelectorAll('.botoes-dias button');
-            botoes.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-
-            // Adicionar a classe "active" ao botão clicado
-            botao.classList.add('active');
-        }
-
-        // Mostrar o primeiro dia por padrão
-        window.onload = function() {
-            mostrarDia('sess1', document.querySelector('.botoes-dias button.active'));
-        };
-
-    </script>
 </body>
 </html>
