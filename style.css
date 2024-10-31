@@ -3,6 +3,10 @@ a {
     color: black; /* Você pode alterar a cor do link aqui */
 }
 
+.table-prog {
+    width: 94%;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,7 +21,7 @@ header {
 }
 
 .programacao {
-    width: 100%;
+    width: 94%;
     max-width: 1200px;
     margin: 20px auto;
     padding: 10px;
@@ -290,8 +294,12 @@ body {
     text-align: justify;
 }
 
+
+
+
+
  /* Estilos responsivos para telas menores */
- @media screen and (max-width: 200px) {
+ @media screen and (max-width: 300px) {
     table {
         border: 0;
     }
@@ -305,6 +313,8 @@ body {
         display: block;
         border-bottom: 2px solid #ddd;
     }
+    
+    
     
     table td {
         display: block;
@@ -323,6 +333,22 @@ body {
         font-weight: bold;
         text-align: left;
     }
+
+    .texto-palestra h2 {
+        font-size: 1.2em; /* Reduzir tamanho do título */
+    }
+
 }
 
+@media (max-width: 768px) {
+    .texto-palestra h2 {
+        font-size: 1.2em; /* Reduzir tamanho do título */
+    }
 
+}
+
+@media (max-width: 300px) {
+    .texto-palestra h2 {
+        font-size: 1em; /* Tamanho ainda menor para telas pequenas */
+    }
+}
