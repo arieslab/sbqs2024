@@ -81,14 +81,17 @@ tbody tr:nth-child(even) {
 }
 
 footer {
+    
     background-color: #1b8d82ff;
     color: white;
     padding: 10px;
-    text-align: left;
-    position: fixed;
+    text-align: center;
+
+   
+
+    
     bottom: 0;
-    width: 100%;
-    width: 85%;
+    
 }
 
 .logo {
@@ -294,11 +297,6 @@ body {
     max-width: 600px;
     text-align: justify;
 }
-
-
-
-
-
  /* Estilos responsivos para telas menores */
  @media screen and (max-width: 300px) {
     table {
@@ -341,9 +339,19 @@ body {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100px) {
     .texto-palestra h2 {
-        font-size: 1.2em; /* Reduzir tamanho do título */
+        font-size: 2em; /* Reduzir tamanho do título */
+    }
+
+    .footer {
+        background-color: #1b8d82ff;
+        color: white;
+        padding: 10px;
+        text-align: left;
+        position: fixed;
+        bottom: 0;
+        width: 50%;
     }
 
 }
