@@ -352,6 +352,30 @@ body {
     display: none;
 }
 
+#topButton {
+    display: none; /* Esconde o botão inicialmente */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto translúcido */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra leve */
+    transition: opacity 0.3s ease; /* Transição de aparecimento */
+}
+
+#topButton:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Aumenta a opacidade ao passar o mouse */
+}
+
  /* Estilos responsivos para telas menores */
  @media screen and (max-width: 300px) {
     table {

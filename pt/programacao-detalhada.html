@@ -1875,6 +1875,7 @@
 
         </div>
     </section>
+    <button id="topButton" onclick="scrollToTop()">&#8679;</button>
 
     <script>
         function filterTables() {
@@ -1902,6 +1903,22 @@
                     table.classList.add('hidden');
                 }
             });
+        }
+
+        window.onscroll = function() { toggleTopButton() };
+
+        function toggleTopButton() {
+            let topButton = document.getElementById("topButton");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                topButton.style.display = "flex"; // Mostra o botão
+            } else {
+                topButton.style.display = "none"; // Esconde o botão
+            }
+        }
+
+        // Função para rolar a página até o topo
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
