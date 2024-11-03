@@ -50,6 +50,12 @@ header {
     border-color: #1b8d82ff;
 }
 
+.botoes-dias button.activeSchedule {
+    background-color: #1b8d82ff;
+    color: white;
+    border-color: #1b8d82ff;
+}
+
 .botoes-dias button:hover {
     background-color: #fcce54ff;
     color: fcce54ff;
