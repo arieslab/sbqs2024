@@ -1882,8 +1882,21 @@
             let tables = document.querySelectorAll('.tabelas-programacao');
 
             tables.forEach(table => {
-                let text = table.innerText.toLowerCase();
-                if (text.includes(input)) {
+                let rows = table.querySelectorAll('tbody tr');
+                let found = false;
+
+                rows.forEach(row => {
+                    let rowText = row.innerText.toLowerCase();
+                    if (rowText.includes(input)) {
+                        row.classList.remove('hidden');
+                        found = true;
+                    } else {
+                        row.classList.add('hidden');
+                    }
+                });
+
+                // Mostra a tabela se ao menos uma linha corresponde à busca, caso contrário esconde-a
+                if (found) {
                     table.classList.remove('hidden');
                 } else {
                     table.classList.add('hidden');

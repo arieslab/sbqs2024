@@ -303,6 +303,7 @@ body {
     text-align: justify;
 }
 
+/*
 .search-bar {
     margin: 20px 0;
     display: flex;
@@ -324,7 +325,32 @@ body {
 .tabelas-programacao.hidden {
     display: none;
 }
+*/
 
+.search-bar {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+#searchInput {
+    width: 60%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+#searchInput:focus {
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+}
+.tabelas-programacao.hidden {
+    display: none;
+}
+.tabela-programacao tr.hidden {
+    display: none;
+}
 
  /* Estilos responsivos para telas menores */
  @media screen and (max-width: 300px) {
