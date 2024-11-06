@@ -29,6 +29,14 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.photo2 {
+    width: 96%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .botoes-dias {
     text-align: center;
     margin-bottom: 20px;
@@ -332,6 +340,58 @@ body {
     display: none;
 }
 */
+
+* {
+    box-sizing: border-box;
+}
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+}
+.slides {
+    display: none;
+    width: 100%;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    user-select: none;
+}
+.next {
+    right: 0;
+}
+.prev {
+    left: 0;
+}
+.fade {
+    animation: fadeEffect 1.5s;
+}
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+.download-btn {
+    display: flexbox;
+    position: relative;
+    margin-bottom: 100px;
+    margin: 2px ;
+    padding: 10px 20px;
+    background-color: #1b8d82ff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
 
 .search-bar {
     margin: 20px 0;

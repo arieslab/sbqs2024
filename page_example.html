@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow com Download</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .slideshow-container {
+            max-width: 600px;
+            position: relative;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+        }
+        .prev {
+            left: 0;
+        }
+        .fade {
+            animation: fadeEffect 1.5s;
+        }
+        @keyframes fadeEffect {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+        .download-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align: center;">Slideshow com Download</h2>
+
+<div class="slideshow-container">
+    <img class="slides fade" src="img/Alexander_Palestra.jpeg" alt="Imagem 1">
+    <img class="slides fade" src="img/Marcio_Ribeiro_Palestra.jpeg" alt="Imagem 2">
+    <img class="slides fade" src="img/Sheila_Palestra.jpeg" alt="Imagem 3">
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Botão de Download -->
+<a id="downloadButton" class="download-btn" download>Baixar Imagem Atual</a>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slides");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slides[slideIndex - 1].style.display = "block";  
+
+        // Atualizar o botão de download com o link da imagem atual
+        let currentImage = slides[slideIndex - 1].src;
+        let downloadButton = document.getElementById("downloadButton");
+        downloadButton.href = currentImage;
+        downloadButton.download = `imagem_${slideIndex}.jpg`; // Nome do arquivo
+    }
+</script>
+
+</body>
+</html>
