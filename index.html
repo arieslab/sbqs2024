@@ -1,386 +1,96 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programação do SBQS 2024</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <title>SBQS 2024 - Salvador - Bahia</title>
+    <style>
+        /* Estilos principais */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #1b8d82ff; /* Cor de fundo verde */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Logo no topo */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px; /* Ajuste o tamanho da logo conforme necessário */
+            height: auto;
+        }
+
+        /* Container da imagem da equipe */
+        .team-image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px; /* Espaço após o logo */
+        }
+
+        .team-image-container img {
+            width: 500px; /* Tamanho da foto da equipe */
+            height: auto;
+            border-radius: 10px;
+            border: 5px solid #fff;
+        }
+
+        /* Texto de agradecimento */
+        .thank-you-text {
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo dos botões */
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #fcce54ff; /* Cor de fundo do botão */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0e3d1b; /* Cor mais escura quando passar o mouse */
+        }
+    </style>
 </head>
 <body>
 
-    <button class="floating-button" onclick="window.location.href='https://sbqs.sbc.org.br/2024/index.php/pt/'" >
-        <i class="fas fa-arrow-left icon"></i> <!-- Ícone de voltar -->
-    </button>
-
-    <!-- Botão de selecionar língua -->
-
-    <button id="float-button-pt" style="display: block;" class="floating-button-lang" onclick="switchLanguage('en')">
-        <a href="index_en.html"><img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" class="flag-icon" alt="USA"></a>
-    </button>
-
-
-    <button id="float-button-mapa" style="display: block;" class="float-button-mapa">
-        <a href="pt/mapa.html"><i class="fas fa-location-arrow icon"></i></a>
-    </button>
-
-    
-   
-    <header>
-        <a href="index.html"><img src="img/LOGO_SBQS.png" alt="Logo do Evento" class="logo"/></a>
-    </header>
-
-    <section class="programacao">
-  
-        <!-- Botões de Data -->
-        <div id='botoes-dias-pt' class="botoes-dias">
-            <h1 id="programa-h1-pt">Programação do Evento</h1>
-           
-            <a href="index.html"><button id="programacao-geral" class="activeSchedule" >Programação geral</button></a>
-            <a href="pt/programacao-detalhada.html"><button id="programacao-detalhada" >Programação detalhada</button></a>
-            <a href="event_photos/slide_show.html"><button id="programacao-detalhada" >Fotos do Evento</button></a>
-            <h4 id="programa-info-pt" > Toque em cada evento para saber mais informações.</h4>
-            
-            <button id="dia-um-pt" class="active" onclick="mostrarDia('dia1', this)">05/11/2024</button>
-            <button id="dia-dois-pt" onclick="mostrarDia('dia2', this)">06/11/2024</button>
-            <button id="dia-tres-pt" onclick="mostrarDia('dia3', this)">07/11/2024</button>
-            <button id="dia-quatro-pt" onclick="mostrarDia('dia4', this)">08/11/2024</button>
-
-            
-        </div>
-
-        <div id='botoes-dias-en' style="display: none;" class="botoes-dias">
-            <h1 id="programa-h1-en" >Event Schedule</h1>
-            <h4 id="programa-info-en" style="display: none;"> Tap each event to learn more information.</h4>
-
-            <button id="dia-um-en" class="active" onclick="mostrarDia('dia1', this)">11/05/2024</button>
-            <button id="dia-dois-en"  onclick="mostrarDia('dia2', this)">11/06/2024</button>
-            <button id="dia-tres-en"  onclick="mostrarDia('dia3', this)">11/07/2024</button> 
-            <button id="dia-quatro-en"  onclick="mostrarDia('dia4', this)">11/08/2024</button>
-
-            
-        </div>
-
-
-            
-
-        <!-- Tabela de Programação PT -->
-        <div id="table-shedule-pt" class="tabelas-programacao" >
-            <table id="dia1" class="tabela-programacao">
-                <thead>
-                    <tr>
-                        <th >Horário</th>         
-                        <th>Espaço Raul Chaves <br/> (Fac. Direito)</th>
-                      
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                    <tr >
-                        <td><strong>08:00 às 08:30</strong></td>
-                        <td colspan="1" style="background-color: #59575757">Credenciamento</td>
-                            
-                    </tr>
-                  
-                    <tr>
-                        <td><strong>08:30 às 10:00</strong></td>
-                        <td style="background-color: #6df79f72"><a href="pt/wtdqs.html">WTDQS</a></td>           
-                    </tr>
-                    <tr>
-                        <td><strong>10:00 às 10:30</strong></td>
-                        <td colspan="1" style="background-color: #59575757">Coffee break</td>
-                    </tr>
-                    <tr>
-                        <td><strong>10:30 às 12:00</strong></td>
-                        <td style="background-color: #efe94a72"><a href="pt/cticqs.html">CTICQS</a></td>
-                       
-                    </tr>    
-                    <tr>
-                        <td><strong>12:00 às 12:30</strong></td>
-                        <td colspan="1" style="background-color: #59575757">Almoço</td>
-                        
-                    </tr>  
-                    <tr>
-                        <td><strong>13:30 às 15:00</strong></td>
-                        <td style="background-color: #4ad1ef72"><a href="pt/ctdqs-1.html">CTDQS</a></td>
-                           
-                    </tr>
-                    <tr>
-                        <td><strong>15:00 às 16:00</strong></td>
-                        <td colspan="1" style="background-color: #59575757">Coffee break</td>
-                       
-                    </tr> 
-                    <tr>
-                        <td><strong>16:00 às 17:30</strong></td>
-                        <td style="background-color: #4ad1ef72"><a href="pt/ctdqs-2.html">CTDQS</a></td>
-                    </tr>
-                     
-                </tbody>
-
-                <table id="dia2" class="tabela-programacao">
-                    <thead>
-                        <tr>
-                            <th>Horário</th>
-                            <th>Espaço Raul Chaves <br/>  (Fac. Direito)</th>
-                            <th>Auditório da Escola de Administração</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>08:00 às 09:00</strong></td>
-                            <td colspan="2" style="background-color: #59575757">Credenciamento</td>
-                              
-                        </tr>
-                        <tr>
-                            <td><strong>09:00 às 10:00</strong></td>
-                            <td colspan="2" style="background-color: #6df7e25f">Abertura</td>
-                           
-                        </tr>
-                        <tr>
-                            <td><strong>10:00 às 10:30</strong></td>
-                            <td colspan="2" style="background-color: #59575757">Coffee break</td>
-                             
-                        </tr>
-                        <tr>
-                            <td><strong>10:30 às 12:00</strong></td>
-                            <td onclick="openModal('Palestra_Marcio')" colspan="2" style="background-color: #ef9a4a72"><a>Palestra - Márcio Ribeiro</a></td>
-                           
-                        </tr>
-                       
-                       
-                        <tr>
-                            <td><strong>12:00 às 13:30</strong></td>
-                            <td colspan="2" style="background-color: #59575757">Almoço</td>
-                              
-                        </tr>
-                      
-                        <tr>
-                            <td><strong>13:30 às 15:30</strong></td>
-                            <td style="background-color: #d3ef4a72"><a href="pt/sessao-tecnica-1A.html">Sessão Técnica 1A - Inteligência Artificial, Ciência de Dados e Qualidade de Software</a> </td>
-                            <td style="background-color: #d3ef4a72"><a href="pt/sessao-tecnica-1B.html">Sessão Técnica 1B - Testes</a> </td>   
-                        </tr>
-                        <tr>
-                            <td><strong>15:30 às 16:00</strong></td>
-                            <td colspan="2" style="background-color: #59575757">Coffee break</td>
-                          
-                        </tr>
-                      
-                        <tr>
-                            <td><strong>16:00 às 17:40</strong></td>
-                            <td style="background-color: #b24aef72"><a href="pt/sessao-tecnica-2A.html">Sessão Técnica 2A - Educação em Qualidade de Software - Técnicas, Métodos e Ferramentas</a></td>
-                            <td style="background-color: #b24aef72"><a href="pt/sessao-tecnica-2B.html">Sessão Técnica 2B - Qualidade do código</a></td>
-                        </tr>
-                        <tr>
-                            <td><strong>17:40 às 19:00</strong></td>
-                            <td></td>
-                            <td></td>  
-                        </tr>
-                        <tr>
-                            <td><strong>19:00 às 22:00</strong></td>
-                            <td colspan="2" style="background-color: #43434372"><a href="pt/mapa-jantar.html" >Jantar (por adesão) </a></td>
-                             
-                        </tr>
-                    </tbody>
-
-                    <table id="dia3" class="tabela-programacao">
-                        <thead>
-                            <tr>
-                                <th>Horário</th>
-                                <th>Espaço Raul Chaves <br/> (Fac. Direito)</th>
-                                <th>Auditório da Escola de Administração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>08:00 às 08:30</strong></td>
-                                <td colspan="2" style="background-color: #59575757">Credenciamento</td>
-                                    
-                            </tr>
-                            <tr>
-                                <td><strong>08:30 às 09:30</strong></td>
-                                <td style="background-color: #98a4f972"><a href="pt/sessao-tecnica-3A.html">Sessão Técnica 3A - Educação em Qualidade de Software</a></td>
-                                <td style="background-color: #98a4f972"><a href="pt/sessao-tecnica-3B.html">Sessão Técnica 3B - Code and Low Code</a></td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td><strong>09:30 às 10:30</strong></td>
-                                <td colspan="2" style="background-color: #59575757">Coffee break</td>
-                            </tr>
-                            <tr>
-                                <td><strong>10:30 às 12:00</strong></td>
-                                <td onclick="openModal('Palestra_Alexander')"  colspan="2" style="background-color: #ef9a4a72"><a>Palestra - Alexander Serebrenik</a></td>
-                               
-                            </tr>
-                          
-                           
-                            <tr>
-                                <td><strong>12:00 às 13:30</strong></td>
-                                <td colspan="2" style="background-color: #59575757">Almoço</td>
-                               
-                            </tr>
-                          
-                            <tr>
-                                <td><strong>13:30 às 15:30</strong></td>
-                                <td style="background-color: #d6ef4a72"><a href="pt/sessao-tecnica-4A.html">Sessão Técnica 4A - Novas Perspectivas na Gestão de Organizações de Software</a></td>
-                                <td style="background-color: #d6ef4a72"><a href="pt/sessao-tecnica-4B.html">Sessão Técnica 4B - Requisitos e Qualidade de Software</a> </td>   
-                            </tr>
-                            <tr>
-                                <td><strong>15:30 às 16:00</strong></td>
-                                <td colspan="2" style="background-color: #59575757">Coffee break</td>
-                               
-                            </tr>
-                          
-                            <tr>
-                                <td><strong>16:00 às 18:00</strong></td>
-                                <td style="background-color: #efc64a72"><a href="pt/sessao-tecnica-5A.html">Sessão Técnica 5A - Engenharia de Requisitos - Práticas, Soluções e Educação</a></td>
-                                <td style="background-color: #efc64a72"><a href="pt/sessao-tecnica-5B.html">Sessão Técnica 5B - Gestão Ágil e de Software</a></td>
-                            </tr>
-                            <tr>
-                                <td><strong>18:00 às 19:30</strong></td>
-                                <td colspan="2" style="background-color: #1d7d4d72">Reunião do Comitê Diretivo</td>
-                               
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <table id="dia4" class="tabela-programacao">
-                        <thead>
-                            <tr>
-                                <th>Horário</th>
-                                <th>Espaço Raul Chaves <br/> (Fac. Direito)</th>
-                                <th>Auditório da Escola de Administração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>08:00 às 08:30</strong></td>
-                                <td colspan="2" style="background-color: #59575757">Credenciamento</td>    
-                            </tr>
-                            <tr>
-                                <td><strong>08:30 às 09:30</strong></td>
-                                <td style="background-color: #4a60ef72"><a href="pt/sessao-tecnica-6A.html">Sessão Técnica 6A - Integrando ChatGPT na Educação em Qualidade de Software</a></td>
-                                <td style="background-color: #4a60ef72"><a href="pt/sessao-tecnica-6B.html">Sessão Técnica 6B - Indústria e Academia</a></td>
-                            </tr>
-                            <tr>
-                                <td><strong>09:30 às 10:30</strong></td>
-                                <td colspan="2" style="background-color: #59575757">Coffee break</td>
-                            </tr>
-                            <tr>
-                                <td><strong>10:30 às 12:00</strong></td>
-                                <td onclick="openModal('Palestra_Sheila')" colspan="2" style="background-color: #ef9a4a72"><a>Palestra - Sheila Reinehr</a></td>
-                               
-                            </tr>
-                            <tr>
-                                <td><strong>12:00 às 13:00</strong></td>
-                                <td colspan="2" style="background-color: #59575757">Encerramento</td> 
-                            </tr>
-                           
-                            
-                        </tbody>
-                    </table>
-
-            <!-- Adicione mais tabelas para os outros dias aqui -->
-        </div>
-
-
-    </section>
-
-    <footer class="footnote-text">
-        <p > © Criado pelo Aries Lab por Joselito Júnior - 2024 </p>
-    </footer>
-
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img id="modalImage" src="" alt="Foto do Palestrante">
-            <h3 id="modalName">Nome do Palestrante</h3>
-            <h4 id="modalTitle">Título da Palestra</h4>
-            <h4 >Mais informações <a id="seemore" href="/">aqui</a> </h4> 
-        </div>
+    <!-- Imagem da equipe -->
+    <div class="team-image-container">
+        <img src="event_photos/foto_1156.jpg" alt="Equipe">
     </div>
 
-    <script>
-        function mostrarDia(dia, botao) {
-            // Ocultar todas as tabelas
-            var dias = document.querySelectorAll('.tabela-programacao');
-            dias.forEach(function(el) {
-                el.style.display = 'none';
-            });
+    <!-- Texto de agradecimento -->
+    <div class="thank-you-text">
+        <h1>Valeu, pessoal!</h1>
+        <p>Foi um lindo SBQS! Obrigado a todos vocês!</p>
+    </div>
 
-            // Mostrar a tabela correspondente ao botão clicado
-            document.getElementById(dia).style.display = 'table';
+    <!-- Botões de navegação -->
+    <div class="button-container">
+        <button class="button" onclick="window.location.href='index_prog.html'">Programação do evento</button>
+        <!--<button class="button" onclick="window.location.href='event_photos.html'">Fotos</button>-->
+    </div>
 
-            // Remover a classe "active" de todos os botões
-            var botoes = document.querySelectorAll('.botoes-dias button');
-            botoes.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-
-            // Adicionar a classe "active" ao botão clicado
-            botao.classList.add('active');
-        }
-
-        // Mostrar o primeiro dia por padrão
-        window.onload = function() {
-            mostrarDia('dia1', document.querySelector('.botoes-dias button.active'));
-        };
-
-        function openModal(palestrante) {
-            const modal = document.getElementById("myModal");
-            const image = document.getElementById("modalImage");
-            const name = document.getElementById("modalName");
-            const title = document.getElementById("modalTitle");
-            const summary = document.getElementById("modalSummary");
-            const seemore = document.getElementById("seemore");
-
-            if (palestrante === 'Palestra_Alexander') {
-                image.src = 'img/Alexander_Palestra.jpeg'; // URL da foto
-                name.innerText = 'Alexander Serebrenik';
-                title.innerText = 'Emotions and Software Developers';
-                seemore.href = "https://arieslab.github.io/sbqs2024/en/palestra-2.html";
-               
-            } else if (palestrante === 'Palestra_Marcio') {
-                image.src = 'img/Marcio_Ribeiro_Palestra.jpeg'; // URL da foto
-                name.innerText = 'Márcio Ribeiro';
-                title.innerText = 'Test Smells: Light to Expose, Camera to Analyze, Action to Remove';
-                seemore.href = "https://arieslab.github.io/sbqs2024/en/palestra-1.html";
-                
-            } else if (palestrante === 'Palestra_Sheila') {
-                image.src = 'img/Sheila_Palestra.jpeg'; // URL da foto
-                name.innerText = 'Sheila Reinehr';
-                title.innerText = 'Let’s talk about quality: a multidimensional point of view';
-                seemore.href = "https://arieslab.github.io/sbqs2024/en/palestra-3.html";
-                
-            }
-
-            
-
-            modal.style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-
-         // Função para alternar o menu de idiomas
-         function toggleLanguageMenu() {
-            var menu = document.getElementById('languageMenu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        }
-
-
-       
-
-        
-
-    </script>
 </body>
 </html>
