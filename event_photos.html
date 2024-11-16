@@ -4781,9 +4781,7 @@
             <div class="popup-content">
                 <span class="close-btn" onclick="closePopup()">&times;</span>
                 <img id="popup-image" src="" alt="Imagem Selecionada">
-                <a id="download-link" href="" download>
-                    <button class="download-btn">Baixar</button>
-                </a>
+               
             </div>
         </div>
     
@@ -4792,11 +4790,11 @@
             function openPopup(imageSrc) {
                 const popup = document.getElementById('image-popup');
                 const popupImage = document.getElementById('popup-image');
-                const downloadLink = document.getElementById('download-link');
+                
     
                 // Define a imagem e o link de download
                 popupImage.src = imageSrc;
-                downloadLink.href = imageSrc;
+               
     
                 // Exibe o popup
                 popup.style.display = 'flex';
